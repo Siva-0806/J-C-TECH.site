@@ -3,7 +3,7 @@ import React from 'react';
 const CorporateTraining = () => {
   const cards = [
     { title: "AI for Engineers", desc: "Applied AI foundations for practicing engineers." },
-    { title: "CAD Training", desc: "CATIA, Creo and NX for real design workflows." },
+    { title: "CAD Training", desc: "Production-ready 3D modeling and real design workflows." },
     { title: "EV Fundamentals", desc: "Core EV systems for teams entering electric mobility." },
     { title: "Wiring Harness Design", desc: "End-to-end harness engineering practice." },
     { title: "GD&T", desc: "Precision dimensioning and tolerancing mastery." },

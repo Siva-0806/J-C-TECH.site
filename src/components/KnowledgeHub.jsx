@@ -9,7 +9,7 @@ const KnowledgeHub = () => {
         <h3>The JC Tech Knowledge Hub</h3>
         <p>Free resources built for engineers, not just students — because we're not just a course-selling website.</p>
       </div>
-      <a href="#contact" className="btn btn-primary">Get notified when it opens</a>
+      <a href="#contact" className="btn btn-primary">Get Your Custom Resources</a>
     </div>
     <div className="hub-grid stagger">
       <div className="hub-item reveal"><div className="hub-ic"><svg viewBox="0 0 24 24" fill="none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg></div><span>Engineering Encyclopedia</span></div>

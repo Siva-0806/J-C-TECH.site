@@ -8,7 +8,7 @@ const About = () => {
       <div>
         <div className="section-head reveal">
           <div className="eyebrow">About JC Tech</div>
-          <h2>An Engineering Intelligence Company, Not a Training Shop</h2>
+          <h2>An Engineering Intelligence Company, Not a Training Institute</h2>
         </div>
         <div className="about-copy reveal">
           <p>JC Tech is an Engineering Intelligence Company dedicated to bridging the gap between academic knowledge and industrial excellence.</p>

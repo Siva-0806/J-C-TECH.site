@@ -12,7 +12,7 @@ const cards = [
   },
   {
     icon: <Box size={22} strokeWidth={1.5} />,
-    title: "CAD Design",
+    title: "Engineering Design",
     subtitle: "Product Design & Simulation",
     marginLeft: 40,
   },
