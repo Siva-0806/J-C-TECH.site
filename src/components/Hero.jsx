@@ -5,7 +5,7 @@ import HeroBusinessCards from './HeroBusinessCards';
 
 const Hero = () => {
   return (
-    <section id="hero" style={{ position: 'relative', overflow: 'hidden', minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
+    <section id="hero" style={{ position: 'relative', overflow: 'hidden', minHeight: '100svh', display: 'flex', alignItems: 'center' }}>
       
       {/* Background Video */}
       <video 
@@ -44,8 +44,8 @@ const Hero = () => {
         <div className="hero-content">
           
           <motion.div
-            initial={{ opacity: 0, x: -100 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
             style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}
           >
@@ -63,10 +63,10 @@ const Hero = () => {
 
           <motion.div 
             className="hero-stats" 
-            initial={{ opacity: 0, x: -100 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
-            style={{ marginTop: '22vh' }}
+            style={{ marginTop: 'clamp(32px, 8vw, 80px)' }}
           >
             <div className="hero-stat"><b>22+</b><span>Years Industry Experience</span></div>
             <div className="hero-stat"><b>CAD · AI · EV</b><span>Integrated Curriculum</span></div>

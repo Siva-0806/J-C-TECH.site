@@ -8,6 +8,7 @@
   gap: 20px;
   z-index: 10;
   perspective: 1000px;
+  max-width: calc(50vw - 20px); /* prevent overflow into center */
 }
 
 .fc-card {
@@ -21,6 +22,7 @@
   align-items: center;
   gap: 16px;
   width: max-content;
+  max-width: 100%;
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   cursor: pointer;
   position: relative;
@@ -55,12 +57,14 @@
   padding: 10px;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.03);
+  flex-shrink: 0;
 }
 
 .fc-content {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  min-width: 0;
 }
 
 .fc-title {
@@ -69,12 +73,14 @@
   font-weight: 700;
   color: #fff;
   letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 
 .fc-subtitle {
   font-family: var(--font-utility);
   font-size: 12.5px;
   color: var(--orange-400);
+  white-space: nowrap;
 }
 
 @media (max-width: 1280px) {
@@ -87,16 +93,19 @@
   .fc-wrapper {
     left: 1%;
     gap: 16px;
+    max-width: calc(44vw - 10px);
   }
   .fc-card {
     padding: 12px 16px;
     gap: 12px;
+    /* Clamp the stagger offset so cards don't overflow */
+    margin-left: min(var(--ml, 0px), 20px) !important;
   }
   .fc-title {
-    font-size: 14px;
+    font-size: 13px;
   }
   .fc-subtitle {
-    font-size: 11px;
+    font-size: 10px;
   }
 }
 

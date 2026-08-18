@@ -25,15 +25,18 @@
   --ease:cubic-bezier(.16,.8,.24,1);
 }
 *{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:auto;}
+html{scroll-behavior:auto; overflow-x:hidden; width:100%;}
 body{
   font-family:var(--font-body);
   color:var(--grey-800);
   background:var(--white);
   overflow-x:hidden;
+  width:100%;
   -webkit-font-smoothing:antialiased;
 }
+#root{width:100%;overflow-x:hidden;}
 img{max-width:100%;display:block;}
+
 a{text-decoration:none;color:inherit;}
 ul{list-style:none;}
 .container{max-width:1240px;margin:0 auto;padding:0 32px;}
@@ -239,7 +242,18 @@ h1,h2,h3,h4{font-family:var(--font-display);color:var(--navy-900);line-height:1.
   color:#fff !important;
 }
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;z-index:1001;}
-.hamburger span{width:26px;height:2px;background:var(--white);transition:.35s;}
+.hamburger span{width:26px;height:2px;background:var(--white);transition:.35s;display:block;}
+/* Hamburger → X when open */
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0);}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+@media(max-width:768px){
+  .hamburger{display:flex;}
+  .nav-links{display:none;}
+  .nav-cta{display:none;}
+  #navbar .container{max-width:100%;width:100%;padding:0 16px;}
+}
 
 /* ============ HERO ============ */
 #hero{
@@ -767,10 +781,7 @@ footer .subtagline{color:var(--orange-400);font-family:var(--font-utility);font-
   .blog-grid, .test-grid{grid-template-columns:1fr 1fr;}
   .footer-top{grid-template-columns:1fr 1fr;}
 }
-@media(max-width:1180px){
-  /* Keep nav-links visible and allow horizontal scroll as defined in Navbar.jsx */
-  .hamburger{display:none;}
-}
+/* Nav-links stay visible above 768px — hamburger is shown via the @media(max-width:768px) block above */
 @media(max-width:1024px){
   .hero-visual{width:400px;height:400px;right:-10%;opacity:.85;}
 }
@@ -894,7 +905,7 @@ textarea:focus-visible, select:focus-visible{
 .hero-orbit-wrap{
   position:absolute;
   top:50%; right:-14%;
-  width:min(150vw,1500px); height:min(150vw,1500px);
+  width:min(100vw,1200px); height:min(100vw,1200px);
   transform:translateY(-50%);
   pointer-events:none; z-index:0;
 }
@@ -905,15 +916,15 @@ textarea:focus-visible, select:focus-visible{
 }
 .hero-orbit svg{width:100%;height:100%;display:block;}
 @media(max-width:1180px){
-  .hero-orbit-wrap{width:min(170vw,1300px);height:min(170vw,1300px);right:-20%;}
+  .hero-orbit-wrap{width:min(100vw,1000px);height:min(100vw,1000px);right:-20%;}
   .hero-orbit{opacity:.4;}
 }
 @media(max-width:768px){
-  .hero-orbit-wrap{width:min(210vw,1100px);height:min(210vw,1100px);right:-26%;}
+  .hero-orbit-wrap{width:min(100vw,800px);height:min(100vw,800px);right:-26%;}
   .hero-orbit{opacity:.3;}
 }
 @media(max-width:480px){
-  .hero-orbit-wrap{width:min(260vw,900px);height:min(260vw,900px);right:-30%;}
+  .hero-orbit-wrap{width:min(100vw,600px);height:min(100vw,600px);right:-30%;}
   .hero-orbit{opacity:.22;}
 }
 
@@ -943,14 +954,9 @@ textarea:focus-visible, select:focus-visible{
   .footer-brand .logo-badge{width:44px;height:44px;}
 }
 
-/* Hero vertical rhythm — on tall viewports, 100vh + vertical centering
-   let the heading drift far below the nav, reading as a big empty gap
-   between the brand mark and "Engineering the Future...". Capping the
-   section height keeps the heading a fixed, short distance under the
-   nav regardless of screen height, and the reduced top padding removes
-   the rest of the dead space. */
+/* Hero vertical rhythm — adaptive height using svh for mobile browser chrome awareness */
 #hero{
-  min-height:min(100vh, 800px) !important;
+  min-height:min(100svh, 800px) !important;
   padding-top:130px !important;
   padding-bottom:80px !important;
 }
@@ -959,6 +965,42 @@ h1{ margin-bottom:16px !important; }
 .hero-sub{ margin-bottom:14px !important; }
 @media(max-width:1024px){
   #hero{ min-height:auto !important; padding-top:110px !important; padding-bottom:70px !important; }
+}
+@media(max-width:768px){
+  #hero{ 
+    min-height:100svh !important; 
+    padding-top:100px !important; 
+    padding-bottom:60px !important;
+    align-items:flex-start !important;
+  }
+  .hero-content{
+    padding:0 16px;
+    width:100%;
+    max-width:100%;
+  }
+  #hero h1{
+    font-size:clamp(28px, 7vw, 44px);
+    line-height:1.2;
+  }
+  .hero-desc{
+    font-size:clamp(14px, 4vw, 17px) !important;
+    max-width:100%;
+  }
+  .hero-btns{
+    flex-direction:column;
+    align-items:center;
+    width:100%;
+    gap:12px;
+  }
+  .hero-btns .btn{
+    width:100%;
+    max-width:320px;
+    justify-content:center;
+  }
+}
+@media(max-width:480px){
+  #hero{ padding-top:90px !important; }
+  #hero h1{ font-size:clamp(26px, 9vw, 36px); }
 }
 
 /* The hamburger is a real <button> now — strip UA chrome, keep the layout */
@@ -999,3 +1041,136 @@ button[disabled]{opacity:.6; cursor:progress;}
 /* "Not published yet" state — honest instead of a dead link */
 .blog-read.is-soon{opacity:.65; cursor:default;}
 .blog-read.is-soon:after{content:'';}
+
+/* ============ COMPREHENSIVE MOBILE RESPONSIVE ADDITIONS ============ */
+/* Covers all remaining sections not addressed by earlier breakpoints  */
+
+/* --- Section spacing for small screens --- */
+@media(max-width:480px){
+  #why, #about, #courses, #ai-solutions, #ev, #consulting, #corporate,
+  #process, #industries, #hub, #blog, #testimonials, #founder, #careers, #contact{
+    padding-top:64px;
+    padding-bottom:64px;
+  }
+  .section-head{margin-bottom:32px;}
+  .section-head h2{font-size:clamp(22px,7vw,30px);}
+  .section-head p{font-size:15px;}
+}
+
+/* --- Hub banner --- */
+@media(max-width:640px){
+  .hub-banner{padding:28px 20px;}
+  .hub-banner h3{font-size:20px;}
+  .hub-banner p{font-size:13.5px;}
+  .hub-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:400px){
+  .hub-grid{grid-template-columns:1fr;}
+}
+
+/* --- Careers banner --- */
+@media(max-width:640px){
+  .careers-banner{padding:28px 20px;}
+  .careers-banner h3{font-size:20px;}
+}
+
+/* --- About pillars: ensure 1 col on very small screens --- */
+@media(max-width:400px){
+  .pillars{grid-template-columns:1fr;}
+}
+
+/* --- EV list already handled but ensure small-screen safety --- */
+@media(max-width:480px){
+  .ev-item{padding:16px 18px;font-size:14px;}
+}
+
+/* --- Process track: already column layout, just tighten spacing --- */
+@media(max-width:480px){
+  .process-step{gap:12px;}
+  .process-dot{width:52px;height:52px;font-size:13px;}
+}
+
+/* --- Why grid: ensure single column on mobile --- */
+@media(max-width:480px){
+  .why-card{padding:24px 18px;}
+  .why-ic{width:44px;height:44px;}
+}
+
+/* --- Course cards mobile --- */
+@media(max-width:480px){
+  .course-card{padding:24px 18px;}
+  .course-card h4{font-size:17px;}
+}
+
+/* --- Footer: tighten on very small --- */
+@media(max-width:400px){
+  footer{padding:60px 0 24px;}
+  .footer-top{gap:24px;}
+}
+
+/* --- Consulting layout: already handled at 960px, tighten on mobile --- */
+@media(max-width:480px){
+  .consult-vbox{padding:14px 16px;}
+  .vbox-title{font-size:14px;}
+  .panel-heading{font-size:20px;}
+}
+
+/* --- Contact form: full-width on mobile --- */
+@media(max-width:640px){
+  .contact-wrap{gap:28px;}
+  .info-row{padding:14px 16px;}
+  .map-box{height:120px;}
+}
+
+/* --- Corporate training marquee: clamp card size on mobile --- */
+@media(max-width:480px){
+  .corp-card{min-width:180px;max-width:180px;padding:20px 16px;}
+  .corp-card h4{font-size:14px;}
+  .corp-card p{font-size:12px;}
+}
+
+/* --- Testimonials: tighten padding on small --- */
+@media(max-width:480px){
+  .test-card{padding:24px 20px;}
+  .test-quote{font-size:13.5px;}
+}
+
+/* --- Blog: tighten on mobile --- */
+@media(max-width:480px){
+  .blog-body{padding:20px 18px 24px;}
+  .blog-body h4{font-size:15px;}
+}
+
+/* --- Founder section: full-width photo on mobile --- */
+@media(max-width:480px){
+  .founder-photo{max-width:100%;border-radius:18px;}
+  .founder-quote{font-size:18px;padding-left:20px;}
+}
+
+/* --- Industries marquee: contained height --- */
+@media(max-width:480px){
+  .chip{padding:12px 20px;font-size:13px;}
+}
+
+/* --- Global: ensure no block-level element can create horizontal scroll --- */
+@media(max-width:768px){
+  section, footer, header, main{
+    max-width:100%;
+    overflow-x:hidden;
+  }
+  .container{
+    padding:0 16px;
+    width:100%;
+    max-width:100%;
+  }
+}
+
+/* --- Prevent sticky photo in founder from creating scroll on short screens --- */
+@media(max-width:768px){
+  .founder-photo-wrapper{position:relative;top:auto;}
+}
+
+/* --- Scroll cue: don't overlap content on very small screens --- */
+@media(max-width:380px){
+  .scroll-cue{display:none;}
+}
