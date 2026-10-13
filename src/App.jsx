@@ -87,6 +87,11 @@ function App() {
 <About />
 </motion.div>
 
+{/*  ============ WHY JC TECH ============  */}
+<motion.div initial={{ y: 40, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 0.8, ease: "easeOut" }} viewport={{ once: true, margin: "-50px" }}>
+<Why />
+</motion.div>
+
 {/*  ============ COURSES ============  */}
 <motion.div initial={{ y: 40, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 0.8, ease: "easeOut" }} viewport={{ once: true, margin: "-50px" }}>
 <Courses />
@@ -123,9 +128,6 @@ function App() {
 
 {/*  ============ FOUNDER ============  */}
 <Founder />
-
-{/*  ============ WHY JC TECH ============  */}
-<Why />
 
 {/*  ============ CONTACT ============  */}
 <Contact />

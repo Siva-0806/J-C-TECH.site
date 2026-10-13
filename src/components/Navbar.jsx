@@ -34,6 +34,7 @@ const Navbar = () => {
           <div className="nav-links">
             <a href="#hero">Home</a>
             <a href="#about">About</a>
+            <a href="#why">Why JC Tech</a>
             <a href="#courses">Courses</a>
             <a href="#ai-solutions">AI Solutions</a>
             <a href="#ev">EV Engineering</a>
@@ -63,6 +64,7 @@ const Navbar = () => {
       <nav id="mobileNav" className={mobileOpen ? 'open' : ''} aria-label="Mobile navigation">
         <a href="#hero" onClick={closeMenu}>Home</a>
         <a href="#about" onClick={closeMenu}>About</a>
+        <a href="#why" onClick={closeMenu}>Why JC Tech</a>
         <a href="#courses" onClick={closeMenu}>Courses</a>
         <a href="#ai-solutions" onClick={closeMenu}>AI Solutions</a>
         <a href="#ev" onClick={closeMenu}>EV Engineering</a>
