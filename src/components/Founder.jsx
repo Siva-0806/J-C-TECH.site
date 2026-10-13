@@ -7,7 +7,11 @@ const Founder = () => {
     <div className="founder-wrap" style={{ alignItems: 'stretch' }}>
       <div className="founder-photo-wrapper">
         <div className="founder-photo reveal">
-          <span className="initials">GC</span>
+          <img
+            src="/Founder.jpeg"
+            alt="Gopinath Chidambaram - Founder of JC Tech"
+            className="founder-img"
+          />
         </div>
       </div>
       <div className="reveal" style={{ alignSelf: 'center' }}>

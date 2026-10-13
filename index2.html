@@ -605,14 +605,20 @@ h1,h2,h3,h4{font-family:var(--font-display);color:var(--navy-900);line-height:1.
 .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
 .blog-card{background:var(--white);border-radius:20px;overflow:hidden;border:1px solid var(--grey-200);transition:.45s var(--ease);}
 .blog-card:hover{transform:translateY(-8px);box-shadow:0 30px 50px -24px rgba(11,30,68,.3);}
-.blog-thumb{height:150px;background:linear-gradient(135deg,var(--navy-800),var(--navy-600));position:relative;overflow:hidden;}
-.blog-thumb::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 30%, rgba(255,106,31,.4), transparent 60%);transition:transform .6s var(--ease);}
-.blog-card:hover .blog-thumb::before{transform:scale(1.4);}
-.blog-tag{position:absolute;top:16px;left:16px;background:rgba(255,255,255,.15);backdrop-filter:blur(6px);color:var(--white);font-family:var(--font-utility);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:6px 14px;border-radius:100px;}
+.blog-thumb{height:190px;background:var(--navy-900);position:relative;overflow:hidden;}
+.blog-thumb-img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .6s var(--ease), filter .6s var(--ease);}
+.blog-thumb-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(7,19,49,0.1) 0%, rgba(7,19,49,0.5) 100%);transition:background .4s var(--ease);pointer-events:none;}
+.blog-card:hover .blog-thumb-img{transform:scale(1.08);filter:brightness(1.06);}
+.blog-card:hover .blog-thumb-overlay{background:linear-gradient(180deg, rgba(7,19,49,0.02) 0%, rgba(7,19,49,0.3) 100%);}
+.blog-tag{position:absolute;top:16px;left:16px;z-index:2;background:rgba(7,19,49,.7);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);color:var(--white);font-family:var(--font-utility);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:6px 14px;border-radius:100px;}
 .blog-body{padding:26px 24px 30px;}
 .blog-body h4{font-size:17px;font-weight:700;margin-bottom:10px;line-height:1.4;}
 .blog-body p{font-size:13.5px;color:var(--grey-500);line-height:1.6;}
 .blog-read{margin-top:16px;font-family:var(--font-utility);font-size:12.5px;font-weight:700;color:var(--orange-500);display:inline-flex;align-items:center;gap:6px;}
+.btn-download-blog{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,#FF7A2F 0%,#FF5A1F 100%);color:#fff!important;font-family:var(--font-utility);font-size:13px;font-weight:700;letter-spacing:.02em;padding:10px 22px;border-radius:10px;text-decoration:none;box-shadow:0 4px 14px rgba(255,106,31,.3);transition:all .3s var(--ease);cursor:pointer;width:fit-content;margin-top:20px;}
+.btn-download-blog:hover{background:linear-gradient(135deg,#FF6A1F 0%,#E04810 100%);transform:translateY(-2px);box-shadow:0 6px 20px rgba(255,106,31,.45);color:#fff!important;}
+.btn-download-blog svg{transition:transform .3s var(--ease);}
+.btn-download-blog:hover svg{transform:translateY(2px);}
 
 /* ============ TESTIMONIALS ============ */
 #testimonials{background:var(--navy-950);padding:120px 0;color:var(--white);}
@@ -639,6 +645,8 @@ h1,h2,h3,h4{font-family:var(--font-display);color:var(--navy-900);line-height:1.
   background:linear-gradient(160deg,var(--navy-800),var(--navy-950));
   display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;
 }
+.founder-img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;position:relative;z-index:2;transition:transform .6s var(--ease);}
+.founder-photo:hover .founder-img{transform:scale(1.03);}
 .founder-photo .initials{font-family:var(--font-display);font-size:88px;font-weight:800;color:rgba(255,255,255,.9);}
 .founder-photo::before{content:"";position:absolute;width:200%;height:200%;background:radial-gradient(circle, rgba(255,106,31,.22), transparent 60%);top:-50%;left:-50%;animation:spin-slow 30s linear infinite;}
 .founder-quote{font-family:var(--font-display);font-size:clamp(22px,2.4vw,30px);font-weight:600;color:var(--navy-900);line-height:1.5;margin-bottom:30px;position:relative;padding-left:34px;}
@@ -1347,27 +1355,48 @@ button[disabled]{opacity:.6; cursor:progress;}
     </div>
     <div class="blog-grid stagger">
       <div class="blog-card reveal">
-        <div class="blog-thumb"><span class="blog-tag">AI</span></div>
+        <div class="blog-thumb">
+          <img src="/blogs/blog-ai-search.jpg" alt="How AI Is Changing Drawing Search on the Shop Floor" class="blog-thumb-img" />
+          <div class="blog-thumb-overlay"></div>
+          <span class="blog-tag">AI</span>
+        </div>
         <div class="blog-body">
           <h4>How AI Is Changing Drawing Search on the Shop Floor</h4>
           <p>A practical look at why search, not automation, is AI's first real win in manufacturing.</p>
-          <span class="blog-read is-soon">Publishing soon</span>
+          <a href="/blogs/how-ai-is-changing-drawing-search.pdf" download="How-AI-Is-Changing-Drawing-Search.pdf" class="btn-download-blog">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Download Blog</span>
+          </a>
         </div>
       </div>
       <div class="blog-card reveal">
-        <div class="blog-thumb"><span class="blog-tag">EV</span></div>
+        <div class="blog-thumb">
+          <img src="/blogs/blog-ev-bms.jpg" alt="Battery Management Systems, Explained for Design Engineers" class="blog-thumb-img" />
+          <div class="blog-thumb-overlay"></div>
+          <span class="blog-tag">EV</span>
+        </div>
         <div class="blog-body">
           <h4>Battery Management Systems, Explained for Design Engineers</h4>
           <p>What every mechanical engineer should know before their first EV project.</p>
-          <span class="blog-read is-soon">Publishing soon</span>
+          <a href="/blogs/battery-management-systems-explained.pdf" download="Battery-Management-Systems-Explained.pdf" class="btn-download-blog">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Download Blog</span>
+          </a>
         </div>
       </div>
       <div class="blog-card reveal">
-        <div class="blog-thumb"><span class="blog-tag">CAD</span></div>
+        <div class="blog-thumb">
+          <img src="/blogs/blog-gdt-cad.jpg" alt="GD&T Mistakes That Cost Manufacturers the Most" class="blog-thumb-img" />
+          <div class="blog-thumb-overlay"></div>
+          <span class="blog-tag">CAD</span>
+        </div>
         <div class="blog-body">
           <h4>GD&amp;T Mistakes That Cost Manufacturers the Most</h4>
           <p>The tolerancing errors we see repeated across every industry we consult for.</p>
-          <span class="blog-read is-soon">Publishing soon</span>
+          <a href="/blogs/gdt-mistakes-that-cost-manufacturers.pdf" download="GDT-Mistakes-That-Cost-Manufacturers.pdf" class="btn-download-blog">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Download Blog</span>
+          </a>
         </div>
       </div>
     </div>
@@ -1414,7 +1443,9 @@ button[disabled]{opacity:.6; cursor:progress;}
 <section id="founder">
   <div class="container">
     <div class="founder-wrap">
-      <div class="founder-photo reveal"><span class="initials">GC</span></div>
+      <div class="founder-photo reveal">
+        <img src="/Founder.jpeg" alt="Gopinath Chidambaram - Founder of JC Tech" class="founder-img" />
+      </div>
       <div class="reveal">
         <div class="eyebrow">Founder's Message</div>
         <p class="founder-quote">Engineering is not about software alone. It is about solving real industrial problems. My mission is to help engineers build practical skills that create value for industries and society.</p>
