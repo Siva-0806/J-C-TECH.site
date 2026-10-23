@@ -670,6 +670,115 @@ h1,h2,h3,h4{font-family:var(--font-display);color:var(--navy-900);line-height:1.
 .hub-banner::before{content:"";position:absolute;right:-6%;top:-30%;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle, rgba(255,106,31,.3), transparent 70%);}
 .hub-banner h3{color:var(--white);font-size:26px;max-width:480px;position:relative;z-index:1;}
 .hub-banner p{color:#AEBBDA;margin-top:12px;max-width:420px;font-size:14.5px;line-height:1.7;position:relative;z-index:1;}
+
+/* ── Hub grid — 5 large cards ── */
+.hub-grid--five{display:grid;grid-template-columns:repeat(5,1fr);gap:28px;}
+
+/* ── Large hub item (clickable card) ── */
+.hub-item--large{
+  position:relative;
+  border:1.5px solid var(--grey-200);
+  border-radius:22px;
+  padding:46px 22px 36px;
+  text-align:center;
+  cursor:pointer;
+  text-decoration:none;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:6px;
+  background:var(--white);
+  overflow:hidden;
+  perspective:800px;
+  transition:border-color .4s var(--ease);
+}
+.hub-item--large:hover{
+  border-color:var(--hub-accent, var(--orange-500));
+}
+
+/* Glow ring behind icon */
+.hub-glow{
+  position:absolute;
+  top:20px;
+  width:90px;height:90px;
+  border-radius:50%;
+  background:radial-gradient(circle, var(--hub-accent, var(--orange-500)) 0%, transparent 70%);
+  opacity:0.12;
+  z-index:0;
+  pointer-events:none;
+}
+.hub-item--large:hover .hub-glow{
+  opacity:0.25;
+  transform:scale(1.25);
+  transition:opacity .4s, transform .4s;
+}
+
+/* ── Large icon container ── */
+.hub-ic--large{
+  width:72px;height:72px;
+  margin:0 auto 18px;
+  border-radius:18px;
+  background:var(--grey-100);
+  display:flex;align-items:center;justify-content:center;
+  transition:background .4s var(--ease), transform .4s var(--ease), box-shadow .4s var(--ease);
+  position:relative;
+  z-index:1;
+}
+.hub-item--large:hover .hub-ic--large{
+  background:color-mix(in srgb, var(--hub-accent, var(--orange-500)) 14%, white);
+  transform:scale(1.08) translateY(-4px);
+  box-shadow:0 12px 28px -8px color-mix(in srgb, var(--hub-accent, var(--orange-500)) 40%, transparent);
+}
+.hub-ic--large svg{
+  width:34px;height:34px;
+  stroke:var(--navy-800);
+  transition:stroke .4s var(--ease);
+}
+.hub-item--large:hover .hub-ic--large svg{
+  stroke:var(--hub-accent, var(--orange-500));
+}
+
+/* ── Label ── */
+.hub-item--large span{
+  font-family:var(--font-utility);
+  font-size:14.5px;
+  font-weight:700;
+  color:var(--grey-700);
+  transition:color .3s;
+  position:relative;
+  z-index:1;
+}
+.hub-item--large:hover span{
+  color:var(--navy-900);
+}
+
+/* ── Download hint (appears on hover) ── */
+.hub-download-hint{
+  display:flex;align-items:center;gap:5px;
+  margin-top:10px;
+  opacity:0;
+  transform:translateY(8px);
+  transition:opacity .35s var(--ease), transform .35s var(--ease);
+  position:relative;z-index:1;
+}
+.hub-item--large:hover .hub-download-hint{
+  opacity:1;
+  transform:translateY(0);
+}
+.hub-download-hint svg{
+  width:15px;height:15px;
+  stroke:var(--hub-accent, var(--orange-500));
+}
+.hub-download-hint small{
+  font-family:var(--font-utility);
+  font-size:11px;
+  font-weight:700;
+  color:var(--hub-accent, var(--orange-500));
+  letter-spacing:.04em;
+  text-transform:uppercase;
+}
+
+/* ── Legacy classes kept for backwards compat (unused items removed) ── */
 .hub-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;}
 .hub-item{
   border:1px solid var(--grey-200);border-radius:16px;padding:24px 18px;text-align:center;
@@ -862,6 +971,7 @@ footer .subtagline{color:var(--orange-400);font-family:var(--font-utility);font-
   .about-wrap, .ev-wrap, .founder-wrap, .contact-wrap{grid-template-columns:1fr;gap:40px;}
   .founder-photo-wrapper { position: relative; top: auto; }
   .hub-grid{grid-template-columns:repeat(3,1fr);}
+  .hub-grid--five{grid-template-columns:repeat(3,1fr);gap:22px;}
   .blog-grid, .test-grid{grid-template-columns:1fr 1fr;}
   .footer-top{grid-template-columns:1fr 1fr;}
 }
@@ -872,6 +982,10 @@ footer .subtagline{color:var(--orange-400);font-family:var(--font-utility);font-
 @media(max-width:768px){
   .why-grid, .course-grid, .ai-grid, .consult-grid, .blog-grid, .test-grid{grid-template-columns:1fr;}
   .hub-grid{grid-template-columns:1fr 1fr;}
+  .hub-grid--five{grid-template-columns:repeat(2,1fr);gap:18px;}
+  .hub-item--large{padding:36px 18px 30px;}
+  .hub-ic--large{width:64px;height:64px;}
+  .hub-ic--large svg{width:28px;height:28px;}
   .footer-top{grid-template-columns:1fr;gap:34px;}
   .process-track{flex-direction:column;gap:34px;align-items:flex-start;}
   .process-track::before, .process-line{display:none;}
@@ -905,6 +1019,11 @@ footer .subtagline{color:var(--orange-400);font-family:var(--font-utility);font-
   .section-head h2{font-size:26px;}
   .section-head p{font-size:15.5px;}
   .why-grid, .course-grid, .ai-grid, .consult-grid, .hub-grid, .blog-grid, .test-grid{grid-template-columns:1fr;}
+  .hub-grid--five{grid-template-columns:1fr;gap:16px;}
+  .hub-item--large{flex-direction:row;padding:22px 24px;gap:14px;text-align:left;}
+  .hub-ic--large{width:56px;height:56px;margin:0;flex-shrink:0;}
+  .hub-glow{display:none;}
+  .hub-download-hint{opacity:1;transform:none;margin-top:0;}
   .pillars{grid-template-columns:1fr;}
   .btn{padding:14px 26px;font-size:13px;width:100%;justify-content:center;}
   .nav-cta{display:none;}
@@ -1147,6 +1266,10 @@ button[disabled]{opacity:.6; cursor:progress;}
   .hub-banner h3{font-size:20px;}
   .hub-banner p{font-size:13.5px;}
   .hub-grid{grid-template-columns:1fr 1fr;}
+  .hub-grid--five{grid-template-columns:repeat(2,1fr);gap:18px;}
+  .hub-item--large{padding:36px 18px 30px;}
+  .hub-ic--large{width:64px;height:64px;}
+  .hub-ic--large svg{width:28px;height:28px;}
 }
 @media(max-width:400px){
   .hub-grid{grid-template-columns:1fr;}
