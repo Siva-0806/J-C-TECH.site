@@ -64,7 +64,7 @@ class JCTechWhitepaper(FPDF):
 
         self.set_font("Helvetica", "", 7.8)
         self.set_xy(PAGE_W - R_MARGIN - 55, 5)
-        self.cell(55, 6, f"{self.doc_code}   |   www.jctech.co.in", align="R")
+        self.cell(55, 6, f"{self.doc_code}   |   www.jctechindia.com", align="R")
 
     def footer(self):
         y_pos = PAGE_H - FOOTER_H
@@ -281,9 +281,9 @@ class JCTechWhitepaper(FPDF):
         self.set_y(y + h + space_after)
 
     # ── Callout Box (Footer / Action / Notice) ──
-    def callout_box(self, title, text, web="www.jctech.co.in", email="info@jctech.co.in"):
+    def callout_box(self, title, text):
         y = self.get_y()
-        h = 24
+        h = 18
         # Card BG
         self.set_fill_color(*CALLOUT_BG)
         self.rect(L_MARGIN, y, CONTENT_W, h, "F")
@@ -304,12 +304,6 @@ class JCTechWhitepaper(FPDF):
         self.set_font("Helvetica", "", 7.8)
         self.set_text_color(*DARK)
         self.multi_cell(CONTENT_W - 12, 3.8, text)
-
-        # Contacts Line
-        self.set_xy(L_MARGIN + 7, y + 18.2)
-        self.set_font("Helvetica", "B", 7.8)
-        self.set_text_color(*ORANGE)
-        self.cell(CONTENT_W - 12, 3.8, f"Portal: {web}   |   Direct Technical Inquiry: {email}")
 
         self.set_y(y + h + 2)
 
@@ -400,9 +394,7 @@ def generate_engineering_encyclopedia():
 
     pdf.callout_box(
         title="Access the Full Living Encyclopedia Online",
-        text="This document represents an executive synthesis. The interactive JC Tech Knowledge Hub includes search filters, interactive formulas, CAD standard templates, and downloadable validation datasets.",
-        web="www.jctech.co.in/hub/encyclopedia",
-        email="encyclopedia@jctech.co.in"
+        text="This document represents an executive synthesis. The interactive JC Tech Knowledge Hub includes search filters, interactive formulas, CAD standard templates, and downloadable validation datasets."
     )
 
     out_path = os.path.join(OUTPUT_DIR, "engineering-encyclopedia.pdf")
@@ -498,9 +490,7 @@ def generate_ev_component_database():
 
     pdf.callout_box(
         title="Request Full CAD Models & Supplier Sourcing Intelligence",
-        text="The full JC Tech EV Database includes STEP models of motors and inverters, thermal simulation flow rates, and verified supplier contact lists across India, Europe, and East Asia.",
-        web="www.jctech.co.in/hub/ev-database",
-        email="ev-database@jctech.co.in"
+        text="The full JC Tech EV Database includes STEP models of motors and inverters, thermal simulation flow rates, and verified supplier contact lists across India, Europe, and East Asia."
     )
 
     out_path = os.path.join(OUTPUT_DIR, "ev-component-database.pdf")
@@ -597,9 +587,7 @@ def generate_cad_standards_library():
 
     pdf.callout_box(
         title="Download Ready-to-Use CAD Template Packs",
-        text="JC Tech provides verified drawing and model templates for SolidWorks, CATIA V5, Creo Parametric, Siemens NX, and AutoCAD with embedded standard layers, title blocks, and tolerance tables.",
-        web="www.jctech.co.in/hub/cad-standards",
-        email="cad-standards@jctech.co.in"
+        text="JC Tech provides verified drawing and model templates for SolidWorks, CATIA V5, Creo Parametric, Siemens NX, and AutoCAD with embedded standard layers, title blocks, and tolerance tables."
     )
 
     out_path = os.path.join(OUTPUT_DIR, "cad-standards-library.pdf")
@@ -696,9 +684,7 @@ def generate_ai_for_engineers_blog():
 
     pdf.callout_box(
         title="Subscribe to the AI for Engineers Weekly Briefing",
-        text="Read in-depth case studies, Python Jupyter notebook tutorials, and benchmark evaluations of AI tools for manufacturing and mechanical engineering.",
-        web="www.jctech.co.in/blog/ai-engineers",
-        email="blog@jctech.co.in"
+        text="Read in-depth case studies, Python Jupyter notebook tutorials, and benchmark evaluations of AI tools for manufacturing and mechanical engineering."
     )
 
     out_path = os.path.join(OUTPUT_DIR, "ai-for-engineers-blog.pdf")
@@ -794,9 +780,7 @@ def generate_engineering_tools():
 
     pdf.callout_box(
         title="Launch JC Tech Engineering Tools in Your Browser",
-        text="Access our complete calculator library online. No installation required. Fully responsive on desktop, tablet, and mobile shop-floor devices.",
-        web="www.jctech.co.in/tools",
-        email="tools@jctech.co.in"
+        text="Access our complete calculator library online. No installation required. Fully responsive on desktop, tablet, and mobile shop-floor devices."
     )
 
     out_path = os.path.join(OUTPUT_DIR, "engineering-tools.pdf")
@@ -829,6 +813,13 @@ if __name__ == "__main__":
                 print(f"  [PASS] {fname} is exactly 2 pages.")
 
     if all_passed:
+        dist_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "dist", "pdfs")
+        if os.path.exists(dist_dir):
+            import shutil
+            for fname in os.listdir(OUTPUT_DIR):
+                if fname.endswith(".pdf"):
+                    shutil.copy2(os.path.join(OUTPUT_DIR, fname), os.path.join(dist_dir, fname))
+            print(f"Copied all PDFs to {dist_dir}")
         print("\n>>> ALL 5 PDFS VERIFIED: PERFECT 2-PAGE LAYOUTS! <<<")
     else:
         print("\n>>> ERROR OCCURRED IN PAGE COUNT VERIFICATION <<<")

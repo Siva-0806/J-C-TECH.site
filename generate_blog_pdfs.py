@@ -99,7 +99,7 @@ class ArticleBuilder:
 
         # Metadata Bar
         page.draw_rect(pymupdf.Rect(M_LEFT, self.cur_y, PAGE_W - M_RIGHT, self.cur_y + 22), fill=(0.97, 0.98, 0.99), color=C_BORDER, width=0.5)
-        meta_txt = "Published by JC Tech  •  Industry Insights Series  •  www.jctech.co.in"
+        meta_txt = "Published by JC Tech  •  Industry Insights Series  •  www.jctechindia.com"
         page.insert_text(pymupdf.Point(M_LEFT + 10, self.cur_y + 14), meta_txt, fontname="helv", fontsize=8, color=C_MUTED)
         self.cur_y += 32
 
@@ -188,7 +188,7 @@ class ArticleBuilder:
             # Divider
             page.draw_line(pymupdf.Point(M_LEFT, footer_y - 8), pymupdf.Point(PAGE_W - M_RIGHT, footer_y - 8), color=C_BORDER, width=0.6)
             # Left footer
-            page.insert_text(pymupdf.Point(M_LEFT, footer_y), "© JC Tech  •  Learn from Real Industry Experience  •  support@jctech.co.in", fontname="helv", fontsize=8, color=C_MUTED)
+            page.insert_text(pymupdf.Point(M_LEFT, footer_y), "© JC Tech  •  Learn from Real Industry Experience", fontname="helv", fontsize=8, color=C_MUTED)
             # Right footer
             p_txt = f"Page {p_num} of {total_pages}"
             page.insert_text(pymupdf.Point(PAGE_W - M_RIGHT - 52, footer_y), p_txt, fontname="hebo", fontsize=8, color=C_MUTED)
@@ -196,6 +196,10 @@ class ArticleBuilder:
         out_path = os.path.join(OUTPUT_DIR, self.filename)
         self.doc.save(out_path)
         print(f"Generated: {out_path} ({total_pages} pages)")
+        dist_dir = os.path.join(os.path.dirname(__file__), "dist", "blogs")
+        if os.path.exists(dist_dir):
+            import shutil
+            shutil.copy2(out_path, os.path.join(dist_dir, self.filename))
         return out_path
 
 

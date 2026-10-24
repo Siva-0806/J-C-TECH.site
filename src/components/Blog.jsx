@@ -35,7 +35,6 @@ const Blog = () => {
     const link = document.createElement('a');
     link.href = pdfUrl;
     link.download = fileName;
-    link.target = '_blank';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -82,13 +81,10 @@ const Blog = () => {
                   <a
                     href={post.pdfUrl}
                     download={post.fileName}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="btn-download-blog"
                     title={`Download ${post.title} as PDF`}
                     onClick={(e) => {
                       e.stopPropagation();
-                      handleDownload(post.pdfUrl, post.fileName);
                     }}
                   >
                     <svg
