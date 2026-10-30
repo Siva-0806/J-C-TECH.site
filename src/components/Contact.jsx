@@ -6,7 +6,7 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState({ type: '', message: null });
 
-  const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_j27iswn';
+  const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_cofsc88';
   const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_69l0zcn';
   const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'NUgJihyk0XuQqog5W';
 
@@ -30,15 +30,23 @@ const Contact = () => {
     setLoading(true);
     setStatus({ type: '', message: null });
 
+    const nameVal = form.elements['name']?.value?.trim() || '';
+    const emailVal = form.elements['email']?.value?.trim() || '';
+    const interestVal = form.elements['interest']?.value?.trim() || '';
+    const messageVal = form.elements['message']?.value?.trim() || '';
+
     // Populate common template parameters so it maps cleanly to any EmailJS template
     const templateParams = {
-      name: form.elements['name']?.value || '',
-      from_name: form.elements['name']?.value || '',
-      email: form.elements['email']?.value || '',
-      from_email: form.elements['email']?.value || '',
-      reply_to: form.elements['email']?.value || '',
-      interest: form.elements['interest']?.value || '',
-      message: form.elements['message']?.value || '',
+      name: nameVal,
+      from_name: nameVal,
+      user_name: nameVal,
+      email: emailVal,
+      from_email: emailVal,
+      user_email: emailVal,
+      reply_to: emailVal,
+      interest: interestVal,
+      message: messageVal,
+      to_name: 'JC Tech Team',
     };
 
     try {
@@ -50,11 +58,12 @@ const Contact = () => {
       form.reset();
     } catch (error) {
       console.error('EmailJS error:', error);
+      const detail = error?.text || error?.message || '';
       setStatus({
         type: 'error',
         message: (
           <>
-            Failed to send message. Please reach out directly on{' '}
+            Failed to send message{detail ? ` (${detail}).` : '.'} Please reach out directly on{' '}
             <a
               href="https://wa.me/919500647222?text=Hi%20JC%20Tech%2C%20I%20would%20like%20to%20get%20in%20touch."
               target="_blank"
