@@ -1,0 +1,1678 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JC Tech — Engineering Training in CAD, AI and EV Systems</title>
+<meta name="description" content="JC Tech trains engineers and industry teams in CAD, AI and EV systems through project-based programmes, and delivers engineering automation consulting built on real production experience.">
+<link rel="canonical" href="https://jctechindia.com/">
+<meta name="theme-color" content="#071331">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20role%3D%22img%22%20aria-label%3D%22JC%20Tech%20logo%22%3E%3Ccircle%20cx%3D%22250%22%20cy%3D%22250%22%20r%3D%22242%22%20fill%3D%22%23FFFFFF%22%2F%3E%3Cg%20stroke%3D%22%23003180%22%20stroke-width%3D%2223%22%20stroke-linecap%3D%22round%22%3E%3Cline%20x1%3D%22365.5%22%20y1%3D%22250.0%22%20x2%3D%22435.5%22%20y2%3D%22250.0%22%2F%3E%3Cline%20x1%3D%22331.7%22%20y1%3D%22331.7%22%20x2%3D%22381.2%22%20y2%3D%22381.2%22%2F%3E%3Cline%20x1%3D%22250.0%22%20y1%3D%22365.5%22%20x2%3D%22250.0%22%20y2%3D%22435.5%22%2F%3E%3Cline%20x1%3D%22168.3%22%20y1%3D%22331.7%22%20x2%3D%22118.8%22%20y2%3D%22381.2%22%2F%3E%3Cline%20x1%3D%22134.5%22%20y1%3D%22250.0%22%20x2%3D%2264.5%22%20y2%3D%22250.0%22%2F%3E%3Cline%20x1%3D%22168.3%22%20y1%3D%22168.3%22%20x2%3D%22118.8%22%20y2%3D%22118.8%22%2F%3E%3Cline%20x1%3D%22250.0%22%20y1%3D%22134.5%22%20x2%3D%22250.0%22%20y2%3D%2264.5%22%2F%3E%3Cline%20x1%3D%22331.7%22%20y1%3D%22168.3%22%20x2%3D%22381.2%22%20y2%3D%22118.8%22%2F%3E%3C%2Fg%3E%3Ccircle%20cx%3D%22250%22%20cy%3D%22250%22%20r%3D%2282.5%22%20fill%3D%22none%22%20stroke%3D%22%2301A53C%22%20stroke-width%3D%2215%22%2F%3E%3Ccircle%20cx%3D%22250%22%20cy%3D%22250%22%20r%3D%2252.5%22%20fill%3D%22none%22%20stroke%3D%22%23FFC000%22%20stroke-width%3D%2213%22%2F%3E%3Ccircle%20cx%3D%22250%22%20cy%3D%22250%22%20r%3D%2231.5%22%20fill%3D%22%23E3221B%22%2F%3E%3C%2Fsvg%3E" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="JC Tech">
+<meta property="og:url" content="https://jctechindia.com/">
+<meta property="og:title" content="JC Tech — Engineering Training in CAD, AI and EV Systems">
+<meta property="og:description" content="Project-based engineering training and consulting in CAD, AI and EV systems — taught from real industry experience.">
+<meta property="og:image" content="https://jctechindia.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="JC Tech — Engineering the Future with Intelligence">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "JC Tech",
+  "alternateName": "JC Tech — Engineering Intelligence Company",
+  "url": "https://jctechindia.com/",
+  "logo": "https://jctechindia.com/jc-logo.svg",
+  "description": "Engineering training and consulting in CAD, AI and EV systems.",
+  "founder": { "@type": "Person", "name": "Gopinath Chidambaram" },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "admissions",
+    "telephone": "+91-99402-26776",
+    "email": "gopiinath.c@gmail.com",
+    "availableLanguage": ["en", "ta"]
+  }
+}
+</script>
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --navy-950:#040B1A;
+  --navy-900:#071331;
+  --navy-800:#0B1E44;
+  --navy-700:#123166;
+  --navy-600:#1B3E7A;
+  --navy-500:#2A52A0;
+  --orange-600:#E85A0C;
+  --orange-500:#FF6A1F;
+  --orange-400:#FF9152;
+  --orange-100:#FFE7D6;
+  --white:#FFFFFF;
+  --grey-50:#F5F7FB;
+  --grey-100:#EEF1F7;
+  --grey-200:#E2E7F0;
+  --grey-400:#9AA5BD;
+  --grey-500:#717D99;
+  --grey-700:#41485C;
+  --grey-800:#262B38;
+  --font-display:'Poppins', sans-serif;
+  --font-body:'Inter', sans-serif;
+  --font-utility:'Roboto', sans-serif;
+  --ease:cubic-bezier(.16,.8,.24,1);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:auto;}
+body{
+  font-family:var(--font-body);
+  color:var(--grey-800);
+  background:var(--white);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{text-decoration:none;color:inherit;}
+ul{list-style:none;}
+.container{max-width:1240px;margin:0 auto;padding:0 32px;}
+section{position:relative;}
+h1,h2,h3,h4{font-family:var(--font-display);color:var(--navy-900);line-height:1.15;letter-spacing:-0.01em;}
+.eyebrow{
+  font-family:var(--font-utility);
+  font-size:12.5px;
+  font-weight:700;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--orange-500);
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:16px;
+}
+.eyebrow::before{
+  content:"";
+  width:26px;height:2px;
+  background:var(--orange-500);
+  display:inline-block;
+}
+.section-head{max-width:680px;margin-bottom:56px;}
+.section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
+.section-head h2{font-size:clamp(28px,3.6vw,42px);font-weight:700;margin-bottom:16px;}
+.section-head p{font-size:17px;color:var(--grey-500);line-height:1.7;}
+.btn{
+  font-family:var(--font-utility);
+  font-weight:700;
+  font-size:14px;
+  letter-spacing:.03em;
+  text-transform:uppercase;
+  padding:16px 34px;
+  border-radius:100px;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  cursor:pointer;
+  border:none;
+  transition:transform .35s var(--ease), box-shadow .35s var(--ease), background .35s var(--ease);
+  position:relative;
+  overflow:hidden;
+}
+.btn-primary{background:var(--orange-500);color:var(--white);box-shadow:0 10px 30px -8px rgba(255,106,31,.55);}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 36px -8px rgba(255,106,31,.7);}
+.btn-ghost{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.35);}
+.btn-ghost:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.7);transform:translateY(-3px);}
+.btn-dark{background:var(--navy-900);color:var(--white);}
+.btn-dark:hover{background:var(--navy-800);transform:translateY(-3px);}
+
+/* ============ SCROLL REVEAL ============ */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease), transform .8s var(--ease);}
+.reveal.in{opacity:1;transform:translateY(0);}
+.stagger .reveal:nth-child(1){transition-delay:.05s;}
+.stagger .reveal:nth-child(2){transition-delay:.15s;}
+.stagger .reveal:nth-child(3){transition-delay:.25s;}
+.stagger .reveal:nth-child(4){transition-delay:.35s;}
+.stagger .reveal:nth-child(5){transition-delay:.45s;}
+.stagger .reveal:nth-child(6){transition-delay:.55s;}
+
+@media (prefers-reduced-motion: reduce){
+  *{animation:none !important; transition:none !important;}
+}
+
+/* ============ NAV ============ */
+#navbar{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  padding:22px 0;
+  transition:padding .4s var(--ease), background .4s var(--ease), box-shadow .4s var(--ease);
+}
+#navbar .container{display:flex;align-items:center;justify-content:space-between;max-width:1400px;gap:24px;flex-wrap:nowrap;}
+#navbar.scrolled{padding:12px 0;background:rgba(4,11,26,.82);backdrop-filter:blur(16px);box-shadow:0 8px 30px -12px rgba(0,0,0,.5);}
+.nav-brand{margin-right:auto;display:flex;align-items:center;gap:12px;flex-shrink:0;}
+.nav-brand .logo{width:38px;height:38px;transition:transform .5s var(--ease);}
+#navbar:hover .nav-brand .logo{transform:rotate(90deg);}
+.nav-brand span{font-family:var(--font-display);font-weight:800;color:var(--white);font-size:19px;letter-spacing:-.01em;}
+.nav-brand small{display:block;font-family:var(--font-utility);font-size:9.5px;letter-spacing:.16em;color:var(--orange-400);font-weight:700;margin-top:1px;}
+.nav-links{display:flex;gap:0;align-items:center;flex-wrap:nowrap;}
+.nav-links a{
+  font-family:var(--font-utility);
+  font-size:11.5px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;
+  color:rgba(255,255,255,.75);
+  padding:9px 11px;border-radius:8px;
+  position:relative;
+  white-space:nowrap;
+  transition:color .3s;
+}
+.nav-links a:hover{color:var(--white);}
+.nav-links a::after{
+  content:"";position:absolute;left:11px;right:11px;bottom:5px;height:2px;background:var(--orange-500);
+  transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease);
+}
+.nav-links a:hover::after{transform:scaleX(1);}
+.nav-cta{
+  /* Flex child — no float, no absolute, no z-index tricks */
+  display:flex;
+  align-items:center;
+  flex-shrink:0;
+  margin-left:16px;
+}
+.nav-cta-btn{
+  /* Pill CTA — strictly inline, no stacking context bleed */
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:11px 26px;
+  background:linear-gradient(135deg,#FF7A2F 0%,#FF5A1F 100%);
+  border-radius:999px;
+  color:#fff !important;
+  font-family:var(--font-utility);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  text-decoration:none;
+  white-space:nowrap;
+  box-shadow:0 8px 30px rgba(255,122,47,.35);
+  border:none;
+  cursor:pointer;
+  /* NO position:absolute, NO translateY on base state, NO negative margins */
+  position:relative;
+  overflow:hidden;
+  /* Smooth hover transitions */
+  transition:transform .3s cubic-bezier(.25,.8,.25,1),
+             box-shadow .3s cubic-bezier(.25,.8,.25,1),
+             filter .3s cubic-bezier(.25,.8,.25,1);
+  /* Prevent zoom-level shifts */
+  flex-shrink:0;
+  width:auto;
+  height:auto;
+}
+.nav-cta-btn::before{
+  /* Shimmer overlay — purely decorative, no layout impact */
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg,rgba(255,255,255,.18) 0%,transparent 60%);
+  border-radius:999px;
+  pointer-events:none;
+  z-index:0;
+}
+.nav-cta-btn:hover{
+  transform:translateY(-2px) scale(1.04);
+  box-shadow:0 14px 40px rgba(255,122,47,.55);
+  filter:brightness(1.08);
+  color:#fff !important;
+}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;z-index:1001;}
+.hamburger span{width:26px;height:2px;background:var(--white);transition:.35s;}
+
+/* ============ HERO ============ */
+#hero{
+  min-height:100vh;
+  display:flex;align-items:center;
+  background:radial-gradient(120% 90% at 50% -10%, #16305f 0%, var(--navy-900) 45%, var(--navy-950) 100%);
+  position:relative;
+  overflow:hidden;
+  padding:160px 0 100px;
+}
+/* .hero-rings removed – replaced by .hero-visual */
+.hero-logo-mark{
+  position:relative;z-index:2;
+  width:190px;height:190px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(7,19,49,.55), rgba(7,19,49,.1) 70%);
+  display:flex;align-items:center;justify-content:center;
+  animation:pulse-ring 5s ease-in-out infinite;
+}
+.hero-logo-mark .logo{
+  width:118px;height:118px;
+  filter:drop-shadow(0 0 30px rgba(255,106,31,.45));
+}
+.ring{fill:none;stroke-width:1.4;}
+.ray{stroke-linecap:round;}
+@keyframes spin-slow{to{transform:rotate(360deg);}}
+@keyframes spin-slow-rev{to{transform:rotate(-360deg);}}
+@keyframes pulse-ring{
+  0%{opacity:.9;transform:scale(.96);}
+  50%{opacity:.35;transform:scale(1.04);}
+  100%{opacity:.9;transform:scale(.96);}
+}
+.g-rays{transform-origin:450px 450px;animation:spin-slow 42s linear infinite;}
+.g-ring-1{transform-origin:450px 450px;animation:spin-slow-rev 60s linear infinite;}
+.g-ring-2{transform-origin:450px 450px;animation:pulse-ring 6s ease-in-out infinite;}
+.g-core{animation:pulse-ring 4s ease-in-out infinite;}
+
+/* === Hero Logo Visual — JC Tech revolving logo ======================= */
+
+/* 1. Outer shell: positions the visual on the right side of the hero.
+      translateY(-50%) lives HERE only — never touched by animations. */
+.hero-visual{
+  position:absolute;
+  right:2%;
+  top:50%;
+  transform:translateY(-50%);   /* centering only, never animated */
+  width:520px;height:520px;
+  pointer-events:none;
+  z-index:1;
+}
+
+/* 2. Soft ambient glow (purely decorative, no layout impact) */
+.hero-visual::before{
+  content:"";
+  position:absolute;
+  inset:-60px;
+  border-radius:50%;
+  background:
+    radial-gradient(ellipse 60% 60% at 50% 50%,rgba(255,122,47,.20),transparent 65%),
+    radial-gradient(ellipse 45% 45% at 50% 50%,rgba(42,82,160,.24),transparent 65%);
+  filter:blur(28px);
+  z-index:0;
+  pointer-events:none;
+  animation:glowPulse 4s ease-in-out infinite alternate;
+}
+
+/* 3. Float wrapper — translates Y only, owns floatLogo */
+.hero-logo-float{
+  position:absolute;inset:0;
+  display:flex;align-items:center;justify-content:center;
+  will-change:transform;
+  animation:floatLogo 5.5s ease-in-out infinite alternate;
+}
+
+/* 4. Rotate wrapper — rotates only, owns rotateLogo
+      Scale is applied here via CSS custom property so hover
+      does NOT override the animation (we use a wrapper instead) */
+.hero-logo-rotate{
+  width:100%;height:100%;
+  display:flex;align-items:center;justify-content:center;
+  will-change:transform;
+  animation:rotateLogo 20s linear infinite;
+  transition:filter .35s ease;
+}
+
+/* 5. The logo image itself */
+.hero-logo-rotate .logo{
+  width:90%;height:90%;
+  object-fit:contain;
+  display:block;
+  user-select:none;
+  filter:
+    drop-shadow(0 0 30px rgba(255,122,47,.32))
+    drop-shadow(0 0 60px rgba(42,82,160,.20));
+  transition:filter .4s ease, width .4s ease, height .4s ease;
+}
+
+/* 6. Hover glow enhancement — scale via wrapper, rotation unbroken */
+.hero-visual:hover .hero-logo-rotate .logo{
+  width:95%;height:95%;
+  filter:
+    drop-shadow(0 0 50px rgba(255,122,47,.55))
+    drop-shadow(0 0 90px rgba(42,82,160,.32));
+}
+
+/* -- Keyframes ---------------------------------------------------- */
+/* Continuous clockwise revolution at 60fps-friendly linear timing  */
+@keyframes rotateLogo{
+  0%   { transform:rotate(0deg);   }
+  100% { transform:rotate(360deg); }
+}
+/* Gentle vertical float, alternates up/down */
+@keyframes floatLogo{
+  0%   { transform:translateY(0px);   }
+  100% { transform:translateY(-14px); }
+}
+/* Breathing glow behind the logo */
+@keyframes glowPulse{
+  0%   { opacity:.6; transform:scale(.95); }
+  100% { opacity:1;  transform:scale(1.05); }
+}
+/* === END Hero Logo Visual =========================================== */
+.hero-grid{
+  position:absolute;inset:0;
+  background-image:linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size:64px 64px;
+  mask-image:radial-gradient(ellipse 70% 60% at 30% 40%, black 20%, transparent 75%);
+}
+.hero-content{position:relative;z-index:2;max-width:680px;}
+.hero-content .eyebrow{color:var(--orange-400);}
+.hero-content .eyebrow::before{background:var(--orange-400);}
+#hero h1{
+  font-size:clamp(38px,5.4vw,66px);
+  font-weight:800;color:var(--white);
+  margin-bottom:22px;
+}
+#hero h1 .accent{color:var(--orange-400);}
+.hero-sub{
+  font-family:var(--font-display);
+  font-size:clamp(17px,1.6vw,21px);
+  font-weight:500;
+  color:#BFD0F0;
+  margin-bottom:18px;
+}
+.hero-desc{
+  font-size:16.5px;
+  color:#9FB0D0;
+  line-height:1.8;
+  max-width:560px;
+  margin-bottom:40px;
+}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:64px;}
+.hero-stats{display:flex;gap:48px;flex-wrap:wrap;}
+.hero-stat b{
+  font-family:var(--font-display);font-weight:800;font-size:32px;color:var(--white);display:block;
+}
+.hero-stat span{
+  font-family:var(--font-utility);font-size:12px;letter-spacing:.05em;color:var(--grey-400);text-transform:uppercase;
+}
+.scroll-cue{
+  position:absolute;bottom:36px;left:32px;
+  display:flex;align-items:center;gap:12px;
+  color:var(--grey-400);font-family:var(--font-utility);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+}
+.scroll-cue .line{width:34px;height:1px;background:var(--grey-400);position:relative;overflow:hidden;}
+.scroll-cue .line::after{content:"";position:absolute;left:-100%;top:0;width:100%;height:100%;background:var(--orange-400);animation:scrollline 2.2s ease-in-out infinite;}
+@keyframes scrollline{0%{left:-100%;}50%{left:0;}100%{left:100%;}}
+
+/* ============ WHY / STATS-FEATURE ============ */
+#why{background:var(--white);padding:120px 0;}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--grey-200);border-radius:24px;overflow:hidden;}
+.why-card{
+  background:var(--white);padding:44px 36px;
+  transition:background .4s var(--ease), transform .4s var(--ease);
+  position:relative;
+}
+.why-card:hover{background:var(--navy-900);transform:translateY(-4px);z-index:2;}
+.why-card:hover h4, .why-card:hover p{color:var(--white);}
+.why-card:hover .why-ic{background:var(--orange-500);}
+.why-ic{
+  width:52px;height:52px;border-radius:14px;
+  background:var(--grey-100);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:24px;
+  transition:background .4s var(--ease);
+}
+.why-ic svg{width:24px;height:24px;stroke:var(--navy-800);transition:stroke .3s;}
+.why-card:hover .why-ic svg{stroke:var(--white);}
+.why-card h4{font-size:18px;font-weight:700;margin-bottom:10px;transition:color .4s;}
+.why-card p{font-size:14.5px;color:var(--grey-500);line-height:1.7;transition:color .4s;}
+
+/* ============ ABOUT ============ */
+#about{background:var(--grey-50);padding:120px 0;}
+.about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
+#about .section-head{margin-bottom:26px;}
+.about-copy p{font-size:16px;color:var(--grey-700);line-height:1.85;margin-bottom:20px;}
+.pillars{margin-top:36px;display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.pillar{
+  background:var(--white);border:1px solid var(--grey-200);border-radius:14px;padding:20px;
+  display:flex;align-items:center;gap:12px;font-family:var(--font-utility);font-weight:700;font-size:13.5px;color:var(--navy-800);
+  transition:transform .3s var(--ease), border-color .3s;
+}
+.pillar:hover{transform:translateX(6px);border-color:var(--orange-400);}
+.pillar .dot{width:9px;height:9px;border-radius:50%;background:var(--orange-500);flex-shrink:0;}
+.vm-cards{display:flex;flex-direction:column;gap:20px;}
+.vm-card{
+  background:var(--navy-900);color:var(--white);border-radius:20px;padding:36px;
+  position:relative;overflow:hidden;
+}
+.vm-card::before{
+  content:"";position:absolute;top:-40%;right:-30%;width:280px;height:280px;border-radius:50%;
+  background:radial-gradient(circle, rgba(255,106,31,.25), transparent 70%);
+}
+.vm-card.alt{background:var(--orange-500);}
+.vm-card.alt::before{background:radial-gradient(circle, rgba(255,255,255,.2), transparent 70%);}
+.vm-card h4{color:var(--white);font-size:12px;text-transform:uppercase;letter-spacing:.16em;font-family:var(--font-utility);font-weight:700;margin-bottom:14px;opacity:.85;}
+.vm-card p{position:relative;font-size:16.5px;line-height:1.7;font-family:var(--font-display);font-weight:500;}
+.founder-line{
+  margin-top:6px;
+  display:flex;align-items:center;gap:14px;
+  font-family:var(--font-utility);font-size:13.5px;color:var(--grey-500);
+}
+.founder-line b{color:var(--navy-900);}
+
+/* ============ COURSES ============ */
+#courses{background:var(--white);padding:120px 0;}
+.course-tabs{display:flex;gap:10px;margin-bottom:44px;flex-wrap:wrap;}
+.tab-btn{
+  font-family:var(--font-utility);font-weight:700;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;
+  padding:12px 22px;border-radius:100px;border:1.5px solid var(--grey-200);background:var(--white);color:var(--grey-700);
+  cursor:pointer;transition:.3s var(--ease);
+}
+.tab-btn.active, .tab-btn:hover{background:var(--navy-900);border-color:var(--navy-900);color:var(--white);}
+.course-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+.course-card{
+  border:1px solid var(--grey-200);border-radius:20px;padding:32px 26px;
+  transition:transform .45s var(--ease), box-shadow .45s var(--ease), border-color .45s;
+  position:relative;overflow:hidden;background:var(--white);
+}
+.course-card::before{
+  content:"";position:absolute;inset:0;background:linear-gradient(150deg, var(--navy-800), var(--navy-950));
+  opacity:0;transition:opacity .45s var(--ease);z-index:0;
+}
+.course-card:hover{transform:translateY(-10px);box-shadow:0 24px 50px -20px rgba(11,30,68,.35);border-color:transparent;}
+.course-card:hover::before{opacity:1;}
+.course-card > *{position:relative;z-index:1;}
+.course-num{font-family:var(--font-utility);font-size:12px;color:var(--orange-500);font-weight:700;letter-spacing:.1em;}
+.course-card h4{font-size:19px;font-weight:700;margin:14px 0 16px;transition:color .4s;}
+.course-card:hover h4{color:var(--white);}
+.course-card ul li{
+  font-size:13.5px;color:var(--grey-500);padding:7px 0;border-top:1px solid var(--grey-100);
+  transition:color .4s, border-color .4s;
+}
+.course-card ul li:first-child{border-top:none;}
+.course-card:hover ul li{color:#C6D2EA;border-color:rgba(255,255,255,.08);}
+
+/* ============ AI SOLUTIONS ============ */
+#ai-solutions{background:var(--navy-950);padding:120px 0;color:var(--white);overflow:hidden;position:relative;}
+#ai-solutions::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(ellipse 60% 50% at 85% 20%, rgba(255,106,31,.14), transparent 60%);
+}
+#ai-solutions .section-head h2, #ai-solutions .section-head p{color:var(--white);}
+#ai-solutions .section-head p{color:#93A2C4;}
+.ai-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;position:relative;z-index:1;}
+.ai-card{
+  background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.09);border-radius:18px;padding:30px;
+  transition:transform .4s var(--ease), background .4s, border-color .4s;
+}
+.ai-card:hover{transform:translateY(-8px);background:rgba(255,255,255,.06);border-color:var(--orange-500);}
+.ai-ic{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--orange-500),var(--orange-600));display:flex;align-items:center;justify-content:center;margin-bottom:20px;}
+.ai-ic svg{width:22px;height:22px;stroke:var(--white);}
+.ai-card h4{color:var(--white);font-size:16.5px;font-weight:700;margin-bottom:8px;}
+.ai-card p{color:#8393B8;font-size:13.5px;line-height:1.6;}
+
+/* ============ EV ENGINEERING ============ */
+#ev{background:var(--grey-50);padding:120px 0;}
+.ev-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center;}
+.ev-visual{
+  position:relative;aspect-ratio:1/1;border-radius:28px;
+  background:linear-gradient(145deg,var(--navy-800),var(--navy-950));
+  display:flex;align-items:center;justify-content:center;overflow:hidden;
+}
+.ev-visual svg{width:72%;}
+.ev-visual .glow{position:absolute;width:60%;height:60%;border-radius:50%;background:radial-gradient(circle, rgba(255,106,31,.35), transparent 70%);animation:pulse-ring 5s ease-in-out infinite;}
+.ev-list{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.ev-item{
+  display:flex;align-items:center;gap:14px;padding:18px 20px;background:var(--white);border:1px solid var(--grey-200);border-radius:14px;
+  font-family:var(--font-utility);font-weight:700;font-size:14px;color:var(--navy-800);
+  transition:transform .3s var(--ease), box-shadow .3s;
+}
+.ev-item:hover{transform:translateY(-5px);box-shadow:0 14px 30px -12px rgba(11,30,68,.25);}
+.ev-item .num{font-family:var(--font-utility);font-size:11px;color:var(--orange-500);font-weight:700;}
+
+/* ============ CONSULTING ============ */
+#consulting{background:var(--white);padding:120px 0;}
+.consult-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--grey-200);border-radius:20px;overflow:hidden;}
+.consult-card{background:var(--white);padding:30px 24px;min-height:170px;display:flex;flex-direction:column;justify-content:space-between;transition:.4s var(--ease);position:relative;}
+.consult-card:hover{background:var(--orange-500);}
+.consult-card:hover h4{color:var(--white);}
+.consult-card:hover .arrow{background:var(--white);color:var(--orange-500);transform:rotate(45deg);}
+.consult-card h4{font-size:15.5px;font-weight:700;transition:color .4s;line-height:1.4;}
+.arrow{width:32px;height:32px;border-radius:50%;background:var(--grey-100);color:var(--navy-800);display:flex;align-items:center;justify-content:center;font-size:16px;transition:.4s var(--ease);}
+
+/* ============ CORPORATE TRAINING ============ */
+#corporate{background:var(--navy-900);padding:120px 0;position:relative;overflow:hidden;}
+#corporate::after{content:"";position:absolute;left:-10%;bottom:-30%;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle, rgba(27,62,122,.6), transparent 70%);}
+#corporate .section-head h2, #corporate .section-head p{color:var(--white);}
+#corporate .section-head p{color:#93A2C4;}
+.corp-scroll{display:flex;gap:18px;overflow-x:auto;padding-bottom:10px;position:relative;z-index:1;scrollbar-width:none;}
+.corp-scroll::-webkit-scrollbar{display:none;}
+.corp-card{
+  min-width:230px;flex:0 0 auto;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);
+  border-radius:18px;padding:28px 24px;transition:.4s var(--ease);
+}
+.corp-card:hover{background:var(--white);transform:translateY(-6px);}
+.corp-card:hover h4{color:var(--navy-900);}
+.corp-card:hover p{color:var(--grey-500);}
+.corp-card h4{color:var(--white);font-size:16px;font-weight:700;margin-bottom:10px;transition:.4s;}
+.corp-card p{color:#8393B8;font-size:13px;transition:.4s;}
+
+/* ============ PROCESS ============ */
+#process{background:var(--white);padding:130px 0 110px;}
+.process-track{display:flex;justify-content:space-between;position:relative;margin-top:60px;}
+.process-track::before{
+  content:"";position:absolute;top:34px;left:0;right:0;height:2px;background:var(--grey-200);
+}
+.process-line{position:absolute;top:34px;left:0;height:2px;background:var(--orange-500);width:0;transition:width 1.6s var(--ease);}
+.process-track.in .process-line{width:100%;}
+.process-step{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;padding:0 10px;}
+.process-dot{
+  width:68px;height:68px;border-radius:50%;background:var(--white);border:2px solid var(--grey-200);
+  display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;color:var(--navy-800);
+  margin-bottom:20px;transition:.5s var(--ease);font-size:15px;
+}
+.process-track.in .process-dot{border-color:var(--orange-500);background:var(--orange-500);color:var(--white);transform:scale(1.08);}
+.process-step h4{font-size:15.5px;font-weight:700;}
+
+/* ============ INDUSTRIES ============ */
+#industries{background:var(--grey-50);padding:100px 0;overflow:hidden;}
+.marquee{display:flex;gap:16px;width:max-content;animation:marquee 26s linear infinite;}
+.marquee:hover{animation-play-state:paused;}
+@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.chip{
+  font-family:var(--font-utility);font-weight:700;font-size:14.5px;color:var(--navy-800);
+  background:var(--white);border:1px solid var(--grey-200);padding:18px 34px;border-radius:100px;white-space:nowrap;
+  display:flex;align-items:center;gap:12px;
+}
+.chip .dot{width:8px;height:8px;border-radius:50%;background:var(--orange-500);}
+
+/* ============ KNOWLEDGE HUB ============ */
+#hub{background:var(--white);padding:120px 0;}
+.hub-banner{
+  background:linear-gradient(120deg, var(--navy-900), var(--navy-700));
+  border-radius:28px;padding:56px 60px;color:var(--white);margin-bottom:50px;
+  display:flex;justify-content:space-between;align-items:center;gap:40px;flex-wrap:wrap;position:relative;overflow:hidden;
+}
+.hub-banner::before{content:"";position:absolute;right:-6%;top:-30%;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle, rgba(255,106,31,.3), transparent 70%);}
+.hub-banner h3{color:var(--white);font-size:26px;max-width:480px;position:relative;z-index:1;}
+.hub-banner p{color:#AEBBDA;margin-top:12px;max-width:420px;font-size:14.5px;line-height:1.7;position:relative;z-index:1;}
+.hub-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;}
+.hub-item{
+  border:1px solid var(--grey-200);border-radius:16px;padding:24px 18px;text-align:center;
+  transition:.4s var(--ease);cursor:default;
+}
+.hub-item:hover{border-color:var(--orange-500);transform:translateY(-6px);box-shadow:0 16px 30px -16px rgba(255,106,31,.4);}
+.hub-item .hub-ic{width:38px;height:38px;margin:0 auto 14px;border-radius:10px;background:var(--grey-100);display:flex;align-items:center;justify-content:center;transition:.4s;}
+.hub-item:hover .hub-ic{background:var(--orange-100);}
+.hub-item .hub-ic svg{width:18px;height:18px;stroke:var(--navy-800);}
+.hub-item span{font-family:var(--font-utility);font-size:12.5px;font-weight:700;color:var(--grey-700);}
+
+/* ============ BLOG ============ */
+#blog{background:var(--grey-50);padding:120px 0;}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.blog-card{background:var(--white);border-radius:20px;overflow:hidden;border:1px solid var(--grey-200);transition:.45s var(--ease);}
+.blog-card:hover{transform:translateY(-8px);box-shadow:0 30px 50px -24px rgba(11,30,68,.3);}
+.blog-thumb{height:190px;background:var(--navy-900);position:relative;overflow:hidden;}
+.blog-thumb-img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .6s var(--ease), filter .6s var(--ease);}
+.blog-thumb-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(7,19,49,0.1) 0%, rgba(7,19,49,0.5) 100%);transition:background .4s var(--ease);pointer-events:none;}
+.blog-card:hover .blog-thumb-img{transform:scale(1.08);filter:brightness(1.06);}
+.blog-card:hover .blog-thumb-overlay{background:linear-gradient(180deg, rgba(7,19,49,0.02) 0%, rgba(7,19,49,0.3) 100%);}
+.blog-tag{position:absolute;top:16px;left:16px;z-index:2;background:rgba(7,19,49,.7);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);color:var(--white);font-family:var(--font-utility);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:6px 14px;border-radius:100px;}
+.blog-body{padding:26px 24px 30px;}
+.blog-body h4{font-size:17px;font-weight:700;margin-bottom:10px;line-height:1.4;}
+.blog-body p{font-size:13.5px;color:var(--grey-500);line-height:1.6;}
+.blog-read{margin-top:16px;font-family:var(--font-utility);font-size:12.5px;font-weight:700;color:var(--orange-500);display:inline-flex;align-items:center;gap:6px;}
+.btn-download-blog{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,#FF7A2F 0%,#FF5A1F 100%);color:#fff!important;font-family:var(--font-utility);font-size:13px;font-weight:700;letter-spacing:.02em;padding:10px 22px;border-radius:10px;text-decoration:none;box-shadow:0 4px 14px rgba(255,106,31,.3);transition:all .3s var(--ease);cursor:pointer;width:fit-content;margin-top:20px;}
+.btn-download-blog:hover{background:linear-gradient(135deg,#FF6A1F 0%,#E04810 100%);transform:translateY(-2px);box-shadow:0 6px 20px rgba(255,106,31,.45);color:#fff!important;}
+.btn-download-blog svg{transition:transform .3s var(--ease);}
+.btn-download-blog:hover svg{transform:translateY(2px);}
+
+/* ============ TESTIMONIALS ============ */
+#testimonials{background:var(--navy-950);padding:120px 0;color:var(--white);}
+#testimonials .section-head h2{color:var(--white);}
+#testimonials .section-head p{color:#93A2C4;}
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.test-card{
+  background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.09);border-radius:20px;padding:34px;
+  transition:.4s var(--ease);
+}
+.test-card:hover{transform:translateY(-8px);border-color:rgba(255,106,31,.5);}
+.test-quote{color:#C6D2EA;font-size:14.5px;line-height:1.75;margin-bottom:24px;}
+.test-person{display:flex;align-items:center;gap:12px;}
+.test-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--orange-500),var(--orange-600));display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;color:var(--white);font-size:14px;}
+.test-person b{color:var(--white);font-size:13.5px;display:block;}
+.test-person span{color:#7C8BAF;font-size:12px;font-family:var(--font-utility);}
+.test-badge{font-family:var(--font-utility);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--orange-400);font-weight:700;margin-bottom:16px;display:block;}
+
+/* ============ FOUNDER ============ */
+#founder{background:var(--white);padding:120px 0;}
+.founder-wrap{display:grid;grid-template-columns:.75fr 1.25fr;gap:70px;align-items:center;}
+.founder-photo{
+  aspect-ratio:4/5;border-radius:26px;
+  background:linear-gradient(160deg,var(--navy-800),var(--navy-950));
+  display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;
+}
+.founder-img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;position:relative;z-index:2;transition:transform .6s var(--ease);}
+.founder-photo:hover .founder-img{transform:scale(1.03);}
+.founder-photo .initials{font-family:var(--font-display);font-size:88px;font-weight:800;color:rgba(255,255,255,.9);}
+.founder-photo::before{content:"";position:absolute;width:200%;height:200%;background:radial-gradient(circle, rgba(255,106,31,.22), transparent 60%);top:-50%;left:-50%;animation:spin-slow 30s linear infinite;}
+.founder-quote{font-family:var(--font-display);font-size:clamp(22px,2.4vw,30px);font-weight:600;color:var(--navy-900);line-height:1.5;margin-bottom:30px;position:relative;padding-left:34px;}
+.founder-quote::before{content:"“";position:absolute;left:-8px;top:-24px;font-size:90px;color:var(--orange-100);font-family:var(--font-display);z-index:0;}
+.founder-name{font-family:var(--font-display);font-weight:700;font-size:19px;color:var(--navy-900);}
+.founder-role{font-family:var(--font-utility);font-size:13px;color:var(--grey-500);margin-top:4px;line-height:1.7;max-width:460px;}
+
+/* ============ CAREERS ============ */
+#careers{background:var(--grey-50);padding:100px 0;}
+.careers-banner{
+  border-radius:26px;padding:60px;background:var(--white);border:1px solid var(--grey-200);
+  display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;
+}
+.careers-banner h3{font-size:26px;max-width:460px;}
+.careers-banner p{color:var(--grey-500);margin-top:10px;max-width:420px;font-size:14.5px;line-height:1.7;}
+
+/* ============ CONTACT ============ */
+#contact{background:var(--navy-900);padding:130px 0;position:relative;overflow:hidden;}
+#contact::before{content:"";position:absolute;left:-8%;top:-20%;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle, rgba(255,106,31,.16), transparent 70%);}
+#contact .section-head h2, #contact .section-head p{color:var(--white);}
+#contact .section-head p{color:#93A2C4;}
+.contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:70px;position:relative;z-index:1;}
+.form-field{margin-bottom:18px;}
+.form-field label{display:block;font-family:var(--font-utility);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:#8393B8;margin-bottom:8px;font-weight:700;}
+.form-field input, .form-field textarea{
+  width:100%;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.15);border-radius:12px;
+  padding:14px 16px;color:var(--white);font-family:var(--font-body);font-size:14.5px;transition:.3s;
+}
+.form-field textarea{resize:vertical;min-height:110px;}
+.form-field input:focus, .form-field textarea:focus{outline:none;border-color:var(--orange-500);background:rgba(255,255,255,.08);}
+.form-field input::placeholder, .form-field textarea::placeholder{color:#5C6B8C;}
+.contact-info{display:flex;flex-direction:column;gap:16px;}
+.info-row{
+  display:flex;align-items:center;gap:16px;padding:22px 24px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);
+  border-radius:16px;transition:.35s var(--ease);
+}
+.info-row:hover{background:rgba(255,255,255,.07);transform:translateX(6px);}
+.info-ic{width:42px;height:42px;border-radius:11px;background:var(--orange-500);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.info-ic svg{width:19px;height:19px;stroke:var(--white);}
+.info-row b{color:var(--white);font-size:14px;display:block;}
+.info-row span{color:#8393B8;font-size:12.5px;}
+.map-box{
+  margin-top:6px;border-radius:16px;overflow:hidden;height:160px;border:1px solid rgba(255,255,255,.09);
+  background:
+    linear-gradient(rgba(11,30,68,.55),rgba(11,30,68,.55)),
+    repeating-linear-gradient(45deg, rgba(255,255,255,.04) 0 2px, transparent 2px 14px);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-utility);color:#8393B8;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;
+}
+
+/* ============ FOOTER ============ */
+footer{background:var(--navy-950);padding:80px 0 30px;color:var(--white);}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:50px;padding-bottom:60px;border-bottom:1px solid rgba(255,255,255,.08);}
+.footer-brand{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+.footer-brand .logo{width:36px;}
+.footer-brand span{font-family:var(--font-display);font-weight:800;font-size:19px;}
+footer .tagline{color:var(--orange-400);font-family:var(--font-display);font-weight:600;font-size:14.5px;}
+footer .subtagline{color:#7C8BAF;font-size:13px;margin-top:6px;}
+.footer-col h5{font-family:var(--font-utility);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#7C8BAF;margin-bottom:18px;}
+.footer-col a{display:block;color:#B4C0DC;font-size:13.5px;padding:6px 0;transition:.3s;}
+.footer-col a:hover{color:var(--orange-400);transform:translateX(4px);}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:28px;flex-wrap:wrap;gap:16px;}
+.footer-bottom p{color:#6B7A9C;font-size:12.5px;}
+.socials{display:flex;gap:10px;}
+.socials a{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;transition:.35s var(--ease);}
+.socials a:hover{background:var(--orange-500);transform:translateY(-4px);}
+.socials svg{width:16px;height:16px;stroke:var(--white);}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:1080px){
+  .why-grid{grid-template-columns:1fr 1fr;}
+  .course-grid{grid-template-columns:1fr 1fr;}
+  .ai-grid{grid-template-columns:1fr 1fr;}
+  .consult-grid{grid-template-columns:1fr 1fr;}
+  .about-wrap, .ev-wrap, .founder-wrap, .contact-wrap{grid-template-columns:1fr;gap:40px;}
+  .hub-grid{grid-template-columns:repeat(3,1fr);}
+  .blog-grid, .test-grid{grid-template-columns:1fr 1fr;}
+  .footer-top{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:1180px){
+  .nav-links, .nav-cta{display:none;}
+  .hamburger{display:flex;}
+}
+@media(max-width:1024px){
+  .hero-visual{width:400px;height:400px;right:-10%;opacity:.85;}
+}
+@media(max-width:768px){
+  .why-grid, .course-grid, .ai-grid, .consult-grid, .blog-grid, .test-grid{grid-template-columns:1fr;}
+  .hub-grid{grid-template-columns:1fr 1fr;}
+  .footer-top{grid-template-columns:1fr;gap:34px;}
+  .process-track{flex-direction:column;gap:34px;align-items:flex-start;}
+  .process-track::before, .process-line{display:none;}
+  .process-step{flex-direction:row;text-align:left;gap:16px;}
+  .process-dot{margin-bottom:0;flex-shrink:0;}
+  .hero-stats{gap:24px 30px;}
+  .container{padding:0 22px;}
+  #hero{padding-top:120px;padding-bottom:80px;min-height:auto;}
+  .hero-visual{width:390px;height:390px;right:-6%;opacity:.8;}
+  .ev-list{grid-template-columns:1fr;}
+  #why, #about, #courses, #ai-solutions, #ev, #consulting, #corporate, #process, #industries, #hub, #blog, #testimonials, #founder, #careers, #contact{padding-top:80px;padding-bottom:80px;}
+  .section-head{margin-bottom:40px;}
+  .about-wrap, .ev-wrap, .founder-wrap, .contact-wrap{gap:36px;}
+  .vm-card, .why-card, .course-card{padding:28px 24px;}
+  .hub-banner, .careers-banner{padding:36px 28px;flex-direction:column;align-items:flex-start;}
+  .form-field input, .form-field textarea{font-size:16px;}
+  .founder-photo{max-width:280px;margin:0 auto;}
+  .corp-card{min-width:210px;}
+}
+
+@media(max-width:480px){
+  .container{padding:0 18px;}
+  h1{word-break:break-word;}
+  #hero h1{font-size:clamp(30px,9vw,40px);}
+  .hero-content .eyebrow{font-size:11px;}
+  .hero-desc{font-size:15px;}
+  .hero-btns{flex-direction:column;gap:12px;}
+  .hero-btns .btn{width:100%;justify-content:center;}
+  .hero-stats{flex-direction:column;gap:18px;}
+  .hero-visual{width:240px;height:240px;right:-8%;opacity:.55;}
+  .section-head h2{font-size:26px;}
+  .section-head p{font-size:15.5px;}
+  .why-grid, .course-grid, .ai-grid, .consult-grid, .hub-grid, .blog-grid, .test-grid{grid-template-columns:1fr;}
+  .pillars{grid-template-columns:1fr;}
+  .btn{padding:14px 26px;font-size:13px;width:100%;justify-content:center;}
+  .nav-cta{display:none;}
+  .nav-brand span{font-size:16px;}
+  .nav-brand small{font-size:8.5px;}
+  .nav-brand .logo{width:32px;height:32px;}
+  .founder-quote{font-size:20px;padding-left:24px;}
+  .founder-quote::before{font-size:64px;top:-16px;left:-4px;}
+  .hub-banner{text-align:left;}
+  .hub-banner .btn, .careers-banner .btn{width:100%;justify-content:center;}
+  .careers-banner{text-align:left;}
+  .footer-bottom{flex-direction:column;align-items:flex-start;gap:20px;}
+  .scroll-cue{left:18px;bottom:20px;}
+  .info-row{padding:16px 18px;}
+  .chip{padding:14px 24px;font-size:13px;}
+}
+
+/* mobile nav drawer */
+#mobileNav{
+  position:fixed;inset:0;background:var(--navy-950);z-index:999;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;
+  transform:translateY(-100%);transition:transform .5s var(--ease);
+  /* Prevent any bleed-through at non-100% zoom levels */
+  will-change:transform;
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
+  visibility:hidden;
+}
+#mobileNav.open{transform:translateY(0);visibility:visible;}
+#mobileNav a{font-family:var(--font-display);font-size:24px;font-weight:600;color:var(--white);padding:14px;}
+/* Mobile nav CTA pill — full-width, centered, orange gradient */
+#mobileNav .nav-cta-btn{
+  font-size:15px !important;
+  padding:15px 32px !important;
+  width:80% !important;
+  max-width:280px;
+  justify-content:center !important;
+  margin-top:20px;
+  /* Override any ::before shimmer positioning issues in mobile context */
+  position:relative;
+}
+
+/* ============ ADDED: accessibility, fallbacks, floating CTA ============ */
+
+/* Keyboard focus — visible on every interactive element */
+a:focus-visible, button:focus-visible, input:focus-visible,
+textarea:focus-visible, select:focus-visible{
+  outline:3px solid var(--orange-500); outline-offset:3px; border-radius:4px;
+}
+
+/* Skip link */
+.skip-link{
+  position:absolute; left:12px; top:-64px; z-index:2000;
+  background:var(--orange-500); color:#fff; font-family:var(--font-body);
+  font-weight:600; padding:12px 20px; border-radius:8px; transition:top .2s var(--ease);
+}
+.skip-link:focus{top:12px;}
+
+/* If JS never runs, scroll-reveal must not leave the page blank */
+.no-js .reveal{opacity:1 !important; transform:none !important;}
+
+.logo{display:block;}
+
+/* Hero orbit — the big ray/ring animation from the earlier draft,
+   now a full-bleed backdrop spanning almost the entire hero rather than
+   a halo tucked behind just the logo. Two moving parts, independent of
+   each other:
+     1. hero-orbit-wrap/.hero-orbit carries a STATIC tilt (rotate + scaleY)
+        that flattens the circle into a slanted, left-leaning ellipse —
+        this is the "tilted, slanted horizontal" part, and it never
+        animates itself, so the tilt always reads cleanly.
+     2. Inside that tilted frame, the rays and rings keep spinning via
+        their existing g-rays/g-ring-1/g-ring-2 animations (defined
+        above) — so the result is a slanted disc that keeps revolving,
+        rather than a flat circle spinning face-on.
+   It sits behind everything (z-index:0, first in the DOM) — the crisp
+   brand mark in .hero-visual (unchanged, un-tilted, sharp) sits on top
+   of it at its usual size and position, so the logo itself never
+   distorts; only the ambient halo behind it does. Kept in the site's
+   navy/orange accents, at low opacity, since it now passes behind the
+   copy too. */
+.hero-orbit-wrap{
+  position:absolute;
+  top:50%; right:-14%;
+  width:min(150vw,1500px); height:min(150vw,1500px);
+  transform:translateY(-50%);
+  pointer-events:none; z-index:0;
+}
+.hero-orbit{
+  width:100%; height:100%;
+  transform:rotate(-20deg) scaleY(.56);
+  opacity:.5;
+}
+.hero-orbit svg{width:100%;height:100%;display:block;}
+@media(max-width:1180px){
+  .hero-orbit-wrap{width:min(170vw,1300px);height:min(170vw,1300px);right:-20%;}
+  .hero-orbit{opacity:.4;}
+}
+@media(max-width:768px){
+  .hero-orbit-wrap{width:min(210vw,1100px);height:min(210vw,1100px);right:-26%;}
+  .hero-orbit{opacity:.3;}
+}
+@media(max-width:480px){
+  .hero-orbit-wrap{width:min(260vw,900px);height:min(260vw,900px);right:-30%;}
+  .hero-orbit{opacity:.22;}
+}
+
+/* Logo badge — the mark's navy rays sat directly on the navy backgrounds
+   (navbar and footer) and nearly vanished. A solid light disc behind the
+   mark alone (not the wordmark) restores contrast; a soft shadow-based
+   glow (not a blurred gradient) keeps the edge crisp instead of smeared.
+   Shared by the nav and footer brand marks; only the nav one animates. */
+.logo-badge{
+  position:relative; display:flex; align-items:center; justify-content:center;
+  border-radius:50%; flex-shrink:0;
+  background:radial-gradient(circle at 50% 40%, #FFFFFF 0%, #F5F7FB 60%, #E7ECF6 100%);
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.5),
+    0 2px 6px rgba(4,11,26,.4),
+    0 0 16px 2px rgba(255,122,47,.38);
+  transition:box-shadow .4s var(--ease);
+}
+.logo-badge .logo{ position:relative; z-index:1; }
+.nav-brand .logo-badge{width:46px;height:46px;}
+.footer-brand .logo-badge{width:44px;height:44px;}
+#navbar:hover .nav-brand .logo-badge{
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.6),
+    0 2px 8px rgba(4,11,26,.45),
+    0 0 22px 4px rgba(255,122,47,.55);
+}
+@media(max-width:640px){
+  .nav-brand .logo-badge{width:40px;height:40px;}
+  .footer-brand .logo-badge{width:38px;height:38px;}
+}
+
+/* Hero vertical rhythm — on tall viewports, 100vh + vertical centering
+   let the heading drift far below the nav, reading as a big empty gap
+   between the brand mark and "Engineering the Future...". Capping the
+   section height keeps the heading a fixed, short distance under the
+   nav regardless of screen height, and the reduced top padding removes
+   the rest of the dead space. */
+#hero{
+  min-height:min(100vh, 800px) !important;
+  padding-top:130px !important;
+  padding-bottom:80px !important;
+}
+.eyebrow{ margin-bottom:14px !important; }
+h1{ margin-bottom:16px !important; }
+.hero-sub{ margin-bottom:14px !important; }
+@media(max-width:1024px){
+  #hero{ min-height:auto !important; padding-top:110px !important; padding-bottom:70px !important; }
+}
+
+/* The hamburger is a real <button> now — strip UA chrome, keep the layout */
+.hamburger{background:none; border:0; padding:0; appearance:none; color:inherit;}
+
+/* Floating WhatsApp CTA */
+.wa-float{
+  position:fixed; right:20px; bottom:20px; z-index:1200;
+  display:flex; align-items:center; gap:10px;
+  background:#25D366; color:#fff; text-decoration:none;
+  font-family:var(--font-body); font-weight:600; font-size:15px;
+  padding:14px 20px 14px 16px; border-radius:999px;
+  box-shadow:0 10px 30px rgba(0,0,0,.28);
+  transition:transform .3s var(--ease), box-shadow .3s var(--ease);
+}
+.wa-float:hover{transform:translateY(-3px); box-shadow:0 16px 38px rgba(0,0,0,.34);}
+.wa-float svg{width:24px;height:24px;fill:currentColor;flex-shrink:0;}
+@media(max-width:640px){
+  .wa-float{padding:15px; right:16px; bottom:16px;}
+  .wa-float span{display:none;}
+}
+
+/* Contact rows are links now */
+.info-row a{color:inherit; text-decoration:none; border-bottom:1px solid transparent;}
+.info-row a:hover{border-bottom-color:var(--orange-500);}
+
+/* Form status message */
+.form-status{
+  margin-top:16px; padding:14px 16px; border-radius:10px;
+  font-family:var(--font-body); font-size:14.5px; line-height:1.5; display:none;
+}
+.form-status.is-ok{display:block; background:#E8F6EC; color:#12592C; border:1px solid #B7E3C4;}
+.form-status.is-error{display:block; background:#FDECEA; color:#8C1D14; border:1px solid #F5C2BD;}
+.form-status a{color:inherit; font-weight:600;}
+.hp-field{position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;}
+button[disabled]{opacity:.6; cursor:progress;}
+
+/* "Not published yet" state — honest instead of a dead link */
+.blog-read.is-soon{opacity:.65; cursor:default;}
+.blog-read.is-soon:after{content:'';}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.remove('no-js');</script>
+
+<!-- Brand mark: one 0.8 KB inline vector, reused everywhere.
+     Standalone copy for email/print/partners: jc-logo.svg -->
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <symbol id="jc-logo" viewBox="0 0 500 500"><g stroke="#003180" stroke-width="23" stroke-linecap="round"><line x1="365.5" y1="250.0" x2="435.5" y2="250.0"/><line x1="331.7" y1="331.7" x2="381.2" y2="381.2"/><line x1="250.0" y1="365.5" x2="250.0" y2="435.5"/><line x1="168.3" y1="331.7" x2="118.8" y2="381.2"/><line x1="134.5" y1="250.0" x2="64.5" y2="250.0"/><line x1="168.3" y1="168.3" x2="118.8" y2="118.8"/><line x1="250.0" y1="134.5" x2="250.0" y2="64.5"/><line x1="331.7" y1="168.3" x2="381.2" y2="118.8"/></g><circle cx="250" cy="250" r="82.5" fill="none" stroke="#01A53C" stroke-width="15"/><circle cx="250" cy="250" r="52.5" fill="none" stroke="#FFC000" stroke-width="13"/><circle cx="250" cy="250" r="31.5" fill="#E3221B"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+
+<!-- ============ NAV ============ -->
+<header>
+<nav id="navbar" aria-label="Primary">
+  <div class="container">
+    <a href="#hero" class="nav-brand">
+      <span class="logo-badge"><svg class="logo" role="img" aria-label="JC Tech logo"><use href="#jc-logo"></use></svg></span>
+      <div>
+        <span>J C Tech</span>
+        <small>ENGINEERING INTELLIGENCE</small>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#courses">Courses</a>
+      <a href="#corporate">Corporate Training</a>
+      <a href="#consulting">Consulting</a>
+      <a href="#ai-solutions">AI Solutions</a>
+      <a href="#ev">EV Engineering</a>
+      <a href="#blog">Blog</a>
+      <a href="#careers">Careers</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#contact" class="nav-cta-btn">Book Consultation</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div id="mobileNav" aria-label="Mobile">
+  <a href="#hero">Home</a>
+  <a href="#about">About</a>
+  <a href="#courses">Courses</a>
+  <a href="#corporate">Corporate Training</a>
+  <a href="#consulting">Consulting</a>
+  <a href="#ai-solutions">AI Solutions</a>
+  <a href="#ev">EV Engineering</a>
+  <a href="#blog">Blog</a>
+  <a href="#careers">Careers</a>
+  <a href="#contact">Contact</a>
+  <a href="#contact" class="nav-cta-btn">Book Consultation</a>
+</div>
+</header>
+
+<main id="main">
+<!-- ============ HERO ============ -->
+<section id="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-orbit-wrap" aria-hidden="true">
+    <div class="hero-orbit">
+      <svg viewBox="0 0 900 900">
+        <g class="g-rays" stroke="#2A52A0" opacity="0.55"><line class="ray" x1="450" y1="60" x2="450" y2="220" stroke-width="10"/><line class="ray" x1="450" y1="680" x2="450" y2="840" stroke-width="10"/><line class="ray" x1="60" y1="450" x2="220" y2="450" stroke-width="10"/><line class="ray" x1="680" y1="450" x2="840" y2="450" stroke-width="10"/><line class="ray" x1="171" y1="171" x2="280" y2="280" stroke-width="10"/><line class="ray" x1="620" y1="620" x2="729" y2="729" stroke-width="10"/><line class="ray" x1="729" y1="171" x2="620" y2="280" stroke-width="10"/><line class="ray" x1="280" y1="620" x2="171" y2="729" stroke-width="10"/></g>
+        <circle class="ring g-ring-1" cx="450" cy="450" r="220" stroke="#FF6A1F" opacity="0.5"/>
+        <circle class="ring g-ring-2" cx="450" cy="450" r="170" stroke="#FF9152" opacity="0.4"/>
+        <circle class="ring" cx="450" cy="450" r="120" stroke="#2A52A0" opacity="0.6"/>
+      </svg>
+    </div>
+  </div>
+  <div class="hero-visual" aria-hidden="true">
+    <div class="hero-logo-float">
+      <div class="hero-logo-rotate">
+        <svg class="logo" aria-hidden="true" focusable="false"><use href="#jc-logo"></use></svg>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="eyebrow">Engineering Intelligence Company</div>
+      <h1>Engineering the Future <span class="accent">with Intelligence</span></h1>
+      <p class="hero-sub">Learn from Real Industry Experience</p>
+      <p class="hero-desc">JC Tech empowers engineers, students and industries through practical training, AI-driven engineering solutions, EV technologies, CAD expertise and industrial consulting.</p>
+      <div class="hero-btns">
+        <a href="#courses" class="btn btn-primary">Explore Courses</a>
+        <a href="#contact" class="btn btn-ghost">Book Free Consultation</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><b>22+</b><span>Years Industry Experience</span></div>
+        <div class="hero-stat"><b>CAD · AI · EV</b><span>Integrated Curriculum</span></div>
+        <div class="hero-stat"><b>100%</b><span>Project-Based Learning</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-cue"><span>Scroll</span><div class="line"></div></div>
+</section>
+
+<!-- ============ WHY JC TECH ============ -->
+<section id="why">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow">Why Engineers Choose Us</div>
+      <h2>22+ Years of Real Industrial Insight, Built Into Every Lesson</h2>
+      <p>We don't teach software. We teach how industries solve problems — then hand you the tools to do it yourself.</p>
+    </div>
+    <div class="why-grid stagger">
+      <div class="why-card reveal">
+        <div class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6 6 .9-4.5 4.2 1 6-5.5-3-5.5 3 1-6L3 8.9 9 8z"/></svg></div>
+        <h4>22+ Years Industry Experience</h4>
+        <p>Curriculum shaped by decades in Product Design, CAD and Project Management, not classroom theory alone.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></div>
+        <h4>Real Industrial Projects</h4>
+        <p>Learn from practical engineering challenges pulled straight from manufacturing floors, not textbooks.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg></div>
+        <h4>AI Integrated Learning</h4>
+        <p>Engineering meets Artificial Intelligence — automation, machine learning and computer vision, applied.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
+        <h4>Corporate Consulting</h4>
+        <p>Real solutions for manufacturing industries — from process improvement to digital engineering.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9z"/></svg></div>
+        <h4>Future Ready</h4>
+        <p>A single track spanning CAD, AI, EV and Digital Engineering — built for Industry 4.0.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <h4>Continuous Support</h4>
+        <p>Practical assignments and mentorship that continue well beyond the last day of class.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="container">
+    <div class="about-wrap">
+      <div>
+        <div class="section-head reveal">
+          <div class="eyebrow">About JC Tech</div>
+          <h2>An Engineering Intelligence Company, Not a Training Shop</h2>
+        </div>
+        <div class="about-copy reveal">
+          <p>JC Tech is an Engineering Intelligence Company dedicated to bridging the gap between academic knowledge and industrial excellence.</p>
+          <p>Founded by <b>Gopinath Chidambaram</b>, an engineering professional with more than 25 years of experience in Product Design, CAD, Project Management, Wiring Harness Engineering and Artificial Intelligence, JC Tech focuses on practical learning, innovation and industry transformation.</p>
+          <p>Our mission is to prepare engineers for Industry 4.0 by combining engineering fundamentals with AI-powered technologies.</p>
+        </div>
+        <div class="pillars reveal">
+          <div class="pillar"><span class="dot"></span>Integrity</div>
+          <div class="pillar"><span class="dot"></span>Innovation</div>
+          <div class="pillar"><span class="dot"></span>Continuous Learning</div>
+          <div class="pillar"><span class="dot"></span>Practical Engineering</div>
+          <div class="pillar"><span class="dot"></span>Customer Success</div>
+          <div class="pillar"><span class="dot"></span>Leadership</div>
+        </div>
+      </div>
+      <div class="vm-cards reveal">
+        <div class="vm-card">
+          <h4>Our Vision</h4>
+          <p>To become India's most trusted Engineering Intelligence Company by integrating CAD, Artificial Intelligence, Electric Vehicles and Industrial Consulting.</p>
+        </div>
+        <div class="vm-card alt">
+          <h4>Our Mission</h4>
+          <p>We simplify complex engineering technologies through practical education, AI-driven innovation and industrial consulting.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COURSES ============ -->
+<section id="courses">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Courses, Organized by Career Path</div>
+      <h2>Choose Where You Want to Go — We'll Build the Path</h2>
+      <p>Instead of a list of software names, we organize learning by the career you're building toward.</p>
+    </div>
+    <div class="course-grid stagger">
+      <div class="course-card reveal">
+        <span class="course-num">Path 01</span>
+        <h4>Mechanical Design</h4>
+        <ul>
+          <li>CATIA</li><li>Creo</li><li>NX</li><li>GD&amp;T</li><li>DFMEA</li><li>DFM</li>
+        </ul>
+      </div>
+      <div class="course-card reveal">
+        <span class="course-num">Path 02</span>
+        <h4>Artificial Intelligence</h4>
+        <ul>
+          <li>Python</li><li>Machine Learning</li><li>Deep Learning</li><li>Computer Vision</li><li>LLM</li>
+        </ul>
+      </div>
+      <div class="course-card reveal">
+        <span class="course-num">Path 03</span>
+        <h4>Electric Vehicle</h4>
+        <ul>
+          <li>Battery</li><li>Motor</li><li>BMS</li><li>Charging</li><li>HV Harness</li><li>Safety</li>
+        </ul>
+      </div>
+      <div class="course-card reveal">
+        <span class="course-num">Path 04</span>
+        <h4>Engineering Automation</h4>
+        <ul>
+          <li>Python Automation</li><li>Excel Automation</li><li>CAD Automation</li><li>AI Automation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AI SOLUTIONS ============ -->
+<section id="ai-solutions">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">AI for Engineering</div>
+      <h2>Where Artificial Intelligence Meets the Shop Floor</h2>
+      <p>Real AI solutions we build and deploy for engineering and manufacturing teams.</p>
+    </div>
+    <div class="ai-grid stagger">
+      <div class="ai-card reveal"><div class="ai-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div><h4>AI Drawing Search</h4><p>Find any engineering drawing instantly using intelligent visual and text search.</p></div>
+      <div class="ai-card reveal"><div class="ai-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div><h4>BOM Automation</h4><p>Generate and validate bills of materials automatically from CAD and drawing data.</p></div>
+      <div class="ai-card reveal"><div class="ai-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div><h4>Drawing Classification</h4><p>Automatically sort and tag thousands of engineering drawings by type and standard.</p></div>
+      <div class="ai-card reveal"><div class="ai-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><h4>Connector Recognition</h4><p>Vision models that identify wiring harness connectors from images in seconds.</p></div>
+      <div class="ai-card reveal"><div class="ai-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></div><h4>Predictive Maintenance</h4><p>Forecast equipment failure before it happens using sensor and historical data.</p></div>
+      <div class="ai-card reveal"><div class="ai-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg></div><h4>Document Intelligence</h4><p>Extract and organize knowledge from technical documents and specifications automatically.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EV ENGINEERING ============ -->
+<section id="ev">
+  <div class="container">
+    <div class="ev-wrap">
+      <div class="ev-visual reveal">
+        <div class="glow"></div>
+        <svg viewBox="0 0 200 200" fill="none">
+          <rect x="30" y="80" width="140" height="55" rx="10" stroke="#FF9152" stroke-width="2.5"/>
+          <circle cx="60" cy="150" r="16" stroke="#FF6A1F" stroke-width="2.5"/>
+          <circle cx="140" cy="150" r="16" stroke="#FF6A1F" stroke-width="2.5"/>
+          <path d="M50 80V60a10 10 0 0110-10h80a10 10 0 0110 10v20" stroke="#2A52A0" stroke-width="2.5"/>
+          <path d="M70 100h20l-8 15h18l-22 25 6-22H70z" fill="#FF6A1F"/>
+        </svg>
+      </div>
+      <div>
+        <div class="section-head reveal">
+          <div class="eyebrow">Electric Vehicle Engineering</div>
+          <h2>Full-Stack EV Systems, Taught the Way Industry Builds Them</h2>
+          <p>From cells to charging infrastructure — the complete EV engineering stack.</p>
+        </div>
+        <div class="ev-list stagger">
+          <div class="ev-item reveal"><span class="num">01</span>Battery Systems</div>
+          <div class="ev-item reveal"><span class="num">02</span>Motor Systems</div>
+          <div class="ev-item reveal"><span class="num">03</span>Charging</div>
+          <div class="ev-item reveal"><span class="num">04</span>Thermal Management</div>
+          <div class="ev-item reveal"><span class="num">05</span>Safety</div>
+          <div class="ev-item reveal"><span class="num">06</span>Harness</div>
+          <div class="ev-item reveal"><span class="num">07</span>Standards</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONSULTING ============ -->
+<section id="consulting">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Engineering Consulting</div>
+      <h2>When Your Team Needs Answers, Not Another Course</h2>
+      <p>Hands-on consulting engagements for manufacturing and engineering organizations.</p>
+    </div>
+    <div class="consult-grid stagger">
+      <div class="consult-card reveal"><h4>CAD Consulting</h4><span class="arrow">↗</span></div>
+      <div class="consult-card reveal"><h4>Product Development</h4><span class="arrow">↗</span></div>
+      <div class="consult-card reveal"><h4>AI for Manufacturing</h4><span class="arrow">↗</span></div>
+      <div class="consult-card reveal"><h4>EV System Consulting</h4><span class="arrow">↗</span></div>
+      <div class="consult-card reveal"><h4>Wiring Harness Consulting</h4><span class="arrow">↗</span></div>
+      <div class="consult-card reveal"><h4>Process Improvement</h4><span class="arrow">↗</span></div>
+      <div class="consult-card reveal"><h4>Digital Engineering</h4><span class="arrow">↗</span></div>
+      <div class="consult-card reveal"><h4>Technical Documentation</h4><span class="arrow">↗</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CORPORATE TRAINING ============ -->
+<section id="corporate">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Corporate Training</div>
+      <h2>Upskill Your Engineering Team, On Their Turf</h2>
+      <p>On-site and cohort-based programs built around your industry's real workflows.</p>
+    </div>
+    <div class="corp-scroll stagger">
+      <div class="corp-card reveal"><h4>AI for Engineers</h4><p>Applied AI foundations for practicing engineers.</p></div>
+      <div class="corp-card reveal"><h4>CAD Training</h4><p>CATIA, Creo and NX for real design workflows.</p></div>
+      <div class="corp-card reveal"><h4>EV Fundamentals</h4><p>Core EV systems for teams entering electric mobility.</p></div>
+      <div class="corp-card reveal"><h4>Wiring Harness Design</h4><p>End-to-end harness engineering practice.</p></div>
+      <div class="corp-card reveal"><h4>GD&amp;T</h4><p>Precision dimensioning and tolerancing mastery.</p></div>
+      <div class="corp-card reveal"><h4>Design Standards</h4><p>Industry and organizational design standards.</p></div>
+      <div class="corp-card reveal"><h4>Python for Engineers</h4><p>Automation and scripting built for engineering teams.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section id="process">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow">Our Process</div>
+      <h2>Every Engineer Follows the Same Proven Path</h2>
+    </div>
+    <div class="process-track">
+      <div class="process-line"></div>
+      <div class="process-step"><div class="process-dot">01</div><h4>Learn</h4></div>
+      <div class="process-step"><div class="process-dot">02</div><h4>Practice</h4></div>
+      <div class="process-step"><div class="process-dot">03</div><h4>Project</h4></div>
+      <div class="process-step"><div class="process-dot">04</div><h4>Industry</h4></div>
+      <div class="process-step"><div class="process-dot">05</div><h4>Career</h4></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INDUSTRIES ============ -->
+<section id="industries">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow">Industries We Serve</div>
+      <h2>Trusted Across Sectors That Can't Afford to Guess</h2>
+    </div>
+  </div>
+  <div class="marquee">
+    <div class="chip"><span class="dot"></span>Automotive</div>
+    <div class="chip"><span class="dot"></span>EV</div>
+    <div class="chip"><span class="dot"></span>Aerospace</div>
+    <div class="chip"><span class="dot"></span>Heavy Equipment</div>
+    <div class="chip"><span class="dot"></span>Manufacturing</div>
+    <div class="chip"><span class="dot"></span>Industrial Automation</div>
+    <div class="chip"><span class="dot"></span>Engineering Services</div>
+    <div class="chip"><span class="dot"></span>Automotive</div>
+    <div class="chip"><span class="dot"></span>EV</div>
+    <div class="chip"><span class="dot"></span>Aerospace</div>
+    <div class="chip"><span class="dot"></span>Heavy Equipment</div>
+    <div class="chip"><span class="dot"></span>Manufacturing</div>
+    <div class="chip"><span class="dot"></span>Industrial Automation</div>
+    <div class="chip"><span class="dot"></span>Engineering Services</div>
+  </div>
+</section>
+
+<!-- ============ KNOWLEDGE HUB ============ -->
+<section id="hub">
+  <div class="container">
+    <div class="hub-banner reveal">
+      <div>
+        <h3>The JC Tech Knowledge Hub</h3>
+        <p>Free resources built for engineers, not just students — because we're not just a course-selling website.</p>
+      </div>
+      <a href="#contact" class="btn btn-primary">Get notified when it opens</a>
+    </div>
+    <div class="hub-grid stagger">
+      <div class="hub-item reveal"><div class="hub-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg></div><span>Engineering Encyclopedia</span></div>
+      <div class="hub-item reveal"><div class="hub-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14a8 3 0 0016 0V5"/></svg></div><span>EV Component Database</span></div>
+      <div class="hub-item reveal"><div class="hub-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div><span>CAD Standards Library</span></div>
+      <div class="hub-item reveal"><div class="hub-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20l9-5-9-5-9 5 9 5z"/><path d="M3 15v-5l9-5 9 5v5"/></svg></div><span>AI for Engineers Blog</span></div>
+      <div class="hub-item reveal"><div class="hub-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 7h6M8 12h1M11 12h1M14 12h1M8 15h1M11 15h1M14 15h1M8 18h1M11 18h1M14 18h1"/></svg></div><span>Engineering Calculators</span></div>
+      <div class="hub-item reveal"><div class="hub-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div><span>Engineering Tools</span></div>
+      <div class="hub-item reveal"><div class="hub-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><path d="M7 10l5 5 5-5M12 15V3"/></svg></div><span>Technical Downloads</span></div>
+      <div class="hub-item reveal"><div class="hub-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h4M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4M9 3v18M9 8h.01M9 13h.01"/></svg></div><span>Case Studies</span></div>
+      <div class="hub-item reveal"><div class="hub-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20M4 4.5A2.5 2.5 0 016.5 2H20v20H6.5A2.5 2.5 0 014 19.5z"/></svg></div><span>Research Papers</span></div>
+      <div class="hub-item reveal"><div class="hub-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M10 9l5 3-5 3z"/></svg></div><span>YouTube Learning Center</span></div>
+      <div class="hub-item reveal"><div class="hub-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20M4 4.5A2.5 2.5 0 016.5 2H20v20H6.5A2.5 2.5 0 014 19.5z"/></svg></div><span>Python Notes</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BLOG ============ -->
+<section id="blog">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">From the Blog</div>
+      <h2>Weekly Articles on What Actually Moves Engineering Forward</h2>
+    </div>
+    <div class="blog-grid stagger">
+      <div class="blog-card reveal">
+        <div class="blog-thumb">
+          <img src="/blogs/blog-ai-search.jpg" alt="How AI Is Changing Drawing Search on the Shop Floor" class="blog-thumb-img" />
+          <div class="blog-thumb-overlay"></div>
+          <span class="blog-tag">AI</span>
+        </div>
+        <div class="blog-body">
+          <h4>How AI Is Changing Drawing Search on the Shop Floor</h4>
+          <p>A practical look at why search, not automation, is AI's first real win in manufacturing.</p>
+          <a href="/blogs/how-ai-is-changing-drawing-search.pdf" download="How-AI-Is-Changing-Drawing-Search.pdf" class="btn-download-blog">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Download Blog</span>
+          </a>
+        </div>
+      </div>
+      <div class="blog-card reveal">
+        <div class="blog-thumb">
+          <img src="/blogs/blog-ev-bms.jpg" alt="Battery Management Systems, Explained for Design Engineers" class="blog-thumb-img" />
+          <div class="blog-thumb-overlay"></div>
+          <span class="blog-tag">EV</span>
+        </div>
+        <div class="blog-body">
+          <h4>Battery Management Systems, Explained for Design Engineers</h4>
+          <p>What every mechanical engineer should know before their first EV project.</p>
+          <a href="/blogs/battery-management-systems-explained.pdf" download="Battery-Management-Systems-Explained.pdf" class="btn-download-blog">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Download Blog</span>
+          </a>
+        </div>
+      </div>
+      <div class="blog-card reveal">
+        <div class="blog-thumb">
+          <img src="/blogs/blog-gdt-cad.jpg" alt="GD&T Mistakes That Cost Manufacturers the Most" class="blog-thumb-img" />
+          <div class="blog-thumb-overlay"></div>
+          <span class="blog-tag">CAD</span>
+        </div>
+        <div class="blog-body">
+          <h4>GD&amp;T Mistakes That Cost Manufacturers the Most</h4>
+          <p>The tolerancing errors we see repeated across every industry we consult for.</p>
+          <a href="/blogs/gdt-mistakes-that-cost-manufacturers.pdf" download="GDT-Mistakes-That-Cost-Manufacturers.pdf" class="btn-download-blog">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Download Blog</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section id="testimonials">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Testimonials</div>
+      <h2>What Students, Companies and Industry Say</h2>
+    </div>
+    <div class="test-grid stagger">
+      <div class="test-card reveal">
+        <span class="test-badge">Student Review</span>
+        <p class="test-quote">The project-based approach meant I was solving real design problems from week one, not just watching software tutorials.</p>
+        <div class="test-person">
+          <div class="test-avatar">SR</div>
+          <div><b>Sanjay R.</b><span>Mechanical Design Trainee</span></div>
+        </div>
+      </div>
+      <div class="test-card reveal">
+        <span class="test-badge">Corporate Review</span>
+        <p class="test-quote">JC Tech's on-site AI training gave our design team automation skills we now use in daily production work.</p>
+        <div class="test-person">
+          <div class="test-avatar">PK</div>
+          <div><b>Priya K.</b><span>Engineering Manager</span></div>
+        </div>
+      </div>
+      <div class="test-card reveal">
+        <span class="test-badge">Industry Feedback</span>
+        <p class="test-quote">Their consulting team cut our BOM review time significantly with a well-scoped automation solution.</p>
+        <div class="test-person">
+          <div class="test-avatar">AV</div>
+          <div><b>Arun V.</b><span>Manufacturing Director</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOUNDER ============ -->
+<section id="founder">
+  <div class="container">
+    <div class="founder-wrap">
+      <div class="founder-photo reveal">
+        <img src="/Founder.jpeg" alt="Gopinath Chidambaram - Founder of JC Tech" class="founder-img" />
+      </div>
+      <div class="reveal">
+        <div class="eyebrow">Founder's Message</div>
+        <p class="founder-quote">Engineering is not about software alone. It is about solving real industrial problems. My mission is to help engineers build practical skills that create value for industries and society.</p>
+        <div class="founder-name">Gopinath Chidambaram</div>
+        <div class="founder-role">Founder, JC Tech — 22+ years in Product Design, CAD, Project Management, Wiring Harness Engineering &amp; Artificial Intelligence.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CAREERS ============ -->
+<section id="careers">
+  <div class="container">
+    <div class="careers-banner reveal">
+      <div>
+        <h3>Build Your Career With JC Tech</h3>
+        <p>We're always looking for engineers, trainers and AI practitioners who want to build real solutions for real industries.</p>
+      </div>
+      <a href="#contact" class="btn btn-dark">View Opportunities</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Get in Touch</div>
+      <h2>Let's Talk About Your Engineering Goals</h2>
+      <p>Whether it's a course, a corporate program or a consulting engagement — start the conversation.</p>
+    </div>
+    <div class="contact-wrap">
+      <!-- ACTION REQUIRED before launch: replace YOUR_FORM_ID with the real endpoint.
+           Free option: formspree.io — sign up with gopiinath.c@gmail.com, create a form,
+           paste the endpoint below. Enquiries then arrive by email.
+           Until that is done the form refuses to accept a message and sends people
+           to WhatsApp instead — it will never silently swallow an enquiry. -->
+      <form class="reveal" id="contactForm" method="POST"
+            action="https://formspree.io/f/YOUR_FORM_ID">
+        <div class="form-field">
+          <label for="cf-name">Full Name</label>
+          <input id="cf-name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+        </div>
+        <div class="form-field">
+          <label for="cf-email">Email Address</label>
+          <input id="cf-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required>
+        </div>
+        <div class="form-field">
+          <label for="cf-interest">Interested In</label>
+          <input id="cf-interest" name="interest" type="text" list="cf-interest-options" placeholder="Course / Corporate Training / Consulting">
+          <datalist id="cf-interest-options">
+            <option value="Course"></option>
+            <option value="Corporate Training"></option>
+            <option value="Consulting"></option>
+            <option value="AI Solutions"></option>
+          </datalist>
+        </div>
+        <div class="form-field">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" placeholder="Tell us what you're looking for..."></textarea>
+        </div>
+        <div class="hp-field" aria-hidden="true">
+          <label for="cf-company">Company (leave blank)</label>
+          <input id="cf-company" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+      <div class="reveal">
+        <div class="contact-info">
+          <div class="info-row"><div class="info-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></div><div><b>Email</b><a href="mailto:gopiinath.c@gmail.com">gopiinath.c@gmail.com</a></div></div>
+          <div class="info-row"><div class="info-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5a2 2 0 012-2h3l2 5-2.5 1.5a11 11 0 005 5L14 12l5 2v3a2 2 0 01-2 2A16 16 0 013 5z"/></svg></div><div><b>WhatsApp</b><a href="https://wa.me/919940226776?text=Hi%20JC%20Tech%2C%20I%27d%20like%20to%20know%20more%20about%20your%20courses." target="_blank" rel="noopener">+91 99402 26776</a></div></div>
+          <div class="info-row"><div class="info-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div><div><b>Phone</b><a href="tel:+919940226776">+91 99402 26776</a></div></div>
+          <div class="info-row"><div class="info-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M10 9l5 3-5 3z"/></svg></div><div><b>Website</b><a href="https://jctechindia.com">jctechindia.com</a></div></div>
+        </div>
+        <!-- TODO(Gopinath): paste the Google Maps embed iframe for the office address here. -->
+        <div class="map-box">Office location — map coming soon</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand"><span class="logo-badge"><svg class="logo" role="img" aria-label="JC Tech logo"><use href="#jc-logo"></use></svg></span><span>J C Tech</span></div>
+        <div class="tagline">Engineering the Future with Intelligence</div>
+        <div class="subtagline">Learn from Real Industry Experience</div>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="#about">About</a>
+        <a href="#founder">Founder</a>
+        <a href="#careers">Careers</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Programs</h5>
+        <a href="#courses">Courses</a>
+        <a href="#corporate">Corporate Training</a>
+        <a href="#consulting">Consulting</a>
+        <a href="#ai-solutions">AI Solutions</a>
+      </div>
+      <div class="footer-col">
+        <h5>Resources</h5>
+        <a href="#hub">Knowledge Hub</a>
+        <a href="#blog">Blog</a>
+        <a href="#ev">EV Engineering</a>
+        <a href="#industries">Industries</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 JC Tech. All rights reserved.</p>
+      <div class="socials">
+        <!-- TODO(Gopinath): real LinkedIn URL, then un-comment.
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M10 9l5 3-5 3z"/></svg></a>
+        -->
+        <a href="https://wa.me/919940226776" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5a2 2 0 012-2h3l2 5-2.5 1.5a11 11 0 005 5L14 12l5 2v3a2 2 0 01-2 2A16 16 0 013 5z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/919940226776?text=Hi%20JC%20Tech%2C%20I%27d%20like%20to%20know%20more%20about%20your%20courses."
+   target="_blank" rel="noopener" aria-label="Contact JC Tech on WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 004.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.8 14.13c-.25.69-1.44 1.32-1.98 1.37-.53.05-1.02.24-3.44-.72-2.9-1.14-4.73-4.1-4.87-4.29-.14-.19-1.16-1.54-1.16-2.94 0-1.4.73-2.09.99-2.37.26-.29.57-.36.76-.36h.55c.17 0 .42-.07.65.5.24.58.81 2 .88 2.15.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.29.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.25 1.39.28.14.45.12.61-.07.17-.19.71-.83.9-1.11.19-.29.38-.24.64-.14.26.09 1.67.79 1.96.93.29.14.48.22.55.34.07.12.07.69-.18 1.38z"/></svg><span>Contact us on WhatsApp</span>
+</a>
+
+<script>
+// Nav scroll state
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+// Mobile nav
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobileNav');
+hamburger.addEventListener('click', () => {
+  const open = mobileNav.classList.toggle('open');
+  hamburger.setAttribute('aria-expanded', String(open));
+  hamburger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+});
+mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.classList.remove('open')));
+
+// Scroll reveal
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// Process line trigger
+const processTrack = document.querySelector('.process-track');
+if (processTrack) {
+  const procObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        processTrack.classList.add('in');
+        procObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.4 });
+  procObserver.observe(processTrack);
+}
+
+// Course tabs (visual highlight only, all paths already visible)
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  });
+});
+
+// ---- Contact form: real submission, honest failure -------------------------
+const contactForm = document.getElementById('contactForm');
+const formStatus  = document.getElementById('formStatus');
+
+function setStatus(kind, html){
+  formStatus.className = 'form-status is-' + kind;
+  formStatus.innerHTML = html;
+}
+
+const WA_LINK = '<a href="https://wa.me/919940226776" target="_blank" rel="noopener">message us on WhatsApp</a>';
+
+contactForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const btn = contactForm.querySelector('button[type="submit"]');
+
+  // Guard: never show a success message the backend cannot back up.
+  if (contactForm.action.includes('YOUR_FORM_ID')) {
+    setStatus('error', 'This form is not connected yet. Please ' + WA_LINK +
+              ' or email <a href="mailto:gopiinath.c@gmail.com">gopiinath.c@gmail.com</a>.');
+    return;
+  }
+  if (!contactForm.reportValidity()) return;
+
+  const original = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+
+  try {
+    const res = await fetch(contactForm.action, {
+      method: 'POST',
+      body: new FormData(contactForm),
+      headers: { Accept: 'application/json' }
+    });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    contactForm.reset();
+    setStatus('ok', 'Message sent. We reply within one working day — if it is urgent, ' + WA_LINK + '.');
+  } catch (err) {
+    setStatus('error', 'That did not send. Please ' + WA_LINK +
+              ' or email <a href="mailto:gopiinath.c@gmail.com">gopiinath.c@gmail.com</a>.');
+  } finally {
+    btn.disabled = false;
+    btn.textContent = original;
+  }
+});
+</script>
+</body>
+</html>

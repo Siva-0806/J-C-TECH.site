@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Animation Hero</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      background-color: #070b14;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      overflow-x: hidden;
+      color: #fff;
+    }
+
+    /* Hero Scroll Container */
+    .hero-scroll-container {
+      position: relative;
+      width: 100%;
+      height: 500vh; /* 500vh gives a buttery smooth scroll experience across 301 frames */
+    }
+
+    .hero-sticky {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #070b14;
+    }
+
+    canvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      will-change: transform;
+    }
+
+    /* Smooth Progress / Preloader Screen */
+    .loader-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #070b14;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.6s;
+    }
+
+    .loader-screen.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .loader-spinner {
+      width: 48px;
+      height: 48px;
+      border: 3px solid rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      border-top-color: #3b82f6;
+      animation: spin 0.8s linear infinite;
+      margin-bottom: 20px;
+    }
+
+    .loader-bar-bg {
+      width: 240px;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .loader-bar-fill {
+      width: 0%;
+      height: 100%;
+      background: linear-gradient(90deg, #3b82f6, #60a5fa);
+      transition: width 0.1s linear;
+      border-radius: 4px;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Loading overlay during pre-decoding for 100% lag-free scrolling -->
+  <div class="loader-screen" id="loader">
+    <div class="loader-spinner"></div>
+    <div class="loader-bar-bg">
+      <div class="loader-bar-fill" id="loader-fill"></div>
+    </div>
+  </div>
+
+  <!-- Hero Scroll Section -->
+  <section class="hero-scroll-container" id="hero-container">
+    <div class="hero-sticky">
+      <canvas id="hero-canvas"></canvas>
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      const TOTAL_FRAMES = 301;
+      const FRAME_PREFIX = './JC%20imgs/JC_Tech_frames_30fps_JPG/frame';
+      const FRAME_SUFFIX = '.jpg';
+
+      const heroContainer = document.getElementById('hero-container');
+      const canvas = document.getElementById('hero-canvas');
+      const ctx = canvas.getContext('2d', { alpha: false, desynchronized: true });
+      const loader = document.getElementById('loader');
+      const loaderFill = document.getElementById('loader-fill');
+
+      // Preloaded frames array (ImageBitmaps or decoded Image elements)
+      const frames = new Array(TOTAL_FRAMES);
+      let loadedCount = 0;
+
+      let currentFrameIndex = 0;
+      let targetFrameIndex = 0;
+      let lastDrawnIndex = -1;
+      let isTicking = false;
+
+      // Helper to pad frame numbers (e.g. 0 -> "00000", 25 -> "00025")
+      function getFrameUrl(index) {
+        const paddedNum = String(index).padStart(5, '0');
+        return `${FRAME_PREFIX}${paddedNum}${FRAME_SUFFIX}`;
+      }
+
+      // Sizing canvas to window with devicePixelRatio for high clarity
+      function resizeCanvas() {
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        canvas.width = window.innerWidth * dpr;
+        canvas.height = window.innerHeight * dpr;
+        lastDrawnIndex = -1; // Force re-render on resize
+        render();
+      }
+
+      // Draw specified frame onto canvas fitting the screen aspect ratio (object-fit cover)
+      function drawFrame(frameImg) {
+        if (!frameImg) return;
+
+        const cw = canvas.width;
+        const ch = canvas.height;
+
+        // Image dimensions
+        const iw = frameImg.width || 1280;
+        const ih = frameImg.height || 720;
+
+        // Cover fit logic
+        const scale = Math.max(cw / iw, ch / ih);
+        const dw = iw * scale;
+        const dh = ih * scale;
+        const dx = (cw - dw) / 2;
+        const dy = (ch - dh) / 2;
+
+        ctx.fillStyle = '#070b14';
+        ctx.fillRect(0, 0, cw, ch);
+        ctx.drawImage(frameImg, dx, dy, dw, dh);
+      }
+
+      function render() {
+        const roundedIndex = Math.round(currentFrameIndex);
+        const clampedIndex = Math.max(0, Math.min(TOTAL_FRAMES - 1, roundedIndex));
+
+        if (clampedIndex !== lastDrawnIndex && frames[clampedIndex]) {
+          drawFrame(frames[clampedIndex]);
+          lastDrawnIndex = clampedIndex;
+        }
+      }
+
+      function updateScrollProgress() {
+        const rect = heroContainer.getBoundingClientRect();
+        const scrollableHeight = rect.height - window.innerHeight;
+        
+        if (scrollableHeight <= 0) {
+          targetFrameIndex = 0;
+          return;
+        }
+
+        // Calculate progress from 0 to 1 inside hero section
+        const progress = Math.max(0, Math.min(1, -rect.top / scrollableHeight));
+        targetFrameIndex = progress * (TOTAL_FRAMES - 1);
+      }
+
+      function animLoop() {
+        // Smooth lerp interpolation for silky animation playback
+        const delta = targetFrameIndex - currentFrameIndex;
+
+        if (Math.abs(delta) > 0.001) {
+          currentFrameIndex += delta * 0.35; // Responsive smooth lerp factor
+          render();
+          requestAnimationFrame(animLoop);
+        } else {
+          currentFrameIndex = targetFrameIndex;
+          render();
+          isTicking = false;
+        }
+      }
+
+      function onScroll() {
+        updateScrollProgress();
+        if (!isTicking) {
+          isTicking = true;
+          requestAnimationFrame(animLoop);
+        }
+      }
+
+      // Preload and decode all frames off-main-thread for 100% lag-free scrolling
+      async function preloadFrames() {
+        resizeCanvas();
+
+        const loadPromises = [];
+
+        for (let i = 0; i < TOTAL_FRAMES; i++) {
+          const url = getFrameUrl(i);
+
+          const promise = new Promise((resolve) => {
+            const img = new Image();
+            img.src = url;
+            
+            // Handle image load
+            img.onload = async () => {
+              try {
+                if (window.createImageBitmap) {
+                  const bitmap = await createImageBitmap(img);
+                  frames[i] = bitmap;
+                } else {
+                  await img.decode();
+                  frames[i] = img;
+                }
+              } catch (e) {
+                frames[i] = img;
+              }
+              loadedCount++;
+              updateLoader();
+              resolve();
+            };
+
+            img.onerror = () => {
+              loadedCount++;
+              updateLoader();
+              resolve();
+            };
+          });
+
+          loadPromises.push(promise);
+        }
+
+        await Promise.all(loadPromises);
+
+        // Hide preloader smoothly when frames are ready
+        setTimeout(() => {
+          loader.classList.add('hidden');
+          updateScrollProgress();
+          currentFrameIndex = targetFrameIndex;
+          render();
+        }, 200);
+      }
+
+      function updateLoader() {
+        const percent = Math.round((loadedCount / TOTAL_FRAMES) * 100);
+        loaderFill.style.width = `${percent}%`;
+      }
+
+      // Event Listeners
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', resizeCanvas, { passive: true });
+
+      // Start preloading frames on init
+      preloadFrames();
+
+    })();
+  </script>
+</body>
+</html>
