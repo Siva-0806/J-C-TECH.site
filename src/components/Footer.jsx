@@ -39,7 +39,7 @@ const Footer = () => {
       </div>
     </div>
     <div className="footer-bottom">
-      <p>© 2026 JC Tech. All rights reserved.</p>
+      <p>© 2026 JC Tech. All rights reserved | Powered by SanaScript</p>
     </div>
   </div>
 </footer>
